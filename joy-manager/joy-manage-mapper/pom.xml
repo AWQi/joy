@@ -5,5 +5,55 @@
     <artifactId>joy-manager</artifactId>
     <version>0.0.1-SNAPSHOT</version>
   </parent>
-  <artifactId>joy-manage-mapper</artifactId>
+     		<groupId>joy</groupId>
+            <artifactId>joy-manage-mapper</artifactId>
+            <version>0.0.1-SNAPSHOT</version>
+    <dependencies>
+		    <dependency>
+		    	<groupId>joy</groupId>
+		        <artifactId>joy-manage-pojo</artifactId>
+		        <version>0.0.1-SNAPSHOT</version>
+		    </dependency>
+       
+        <!-- Mybatis -->
+        <dependency>
+            <groupId>org.mybatis</groupId>
+            <artifactId>mybatis</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.mybatis</groupId>
+            <artifactId>mybatis-spring</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.github.miemiedev</groupId>
+            <artifactId>mybatis-paginator</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.github.pagehelper</groupId>
+            <artifactId>pagehelper</artifactId>
+        </dependency>
+        <!-- MySql -->
+        <dependency>
+            <groupId>mysql</groupId>
+            <artifactId>mysql-connector-java</artifactId>
+        </dependency>
+        <!-- 连接池 -->
+        <dependency>
+            <groupId>com.alibaba</groupId>
+            <artifactId>druid</artifactId>
+        </dependency>
+    </dependencies>
+    <build>
+        <!-- 配置将mybatis的mapper.xml不会复制进web工程，会报错绑定异常找不到mapper.xml -->
+        <resources>
+            <resource>
+                <directory>src/main/java</directory>
+                <includes>
+                    <include>**/*.properties</include>
+                    <include>**/*.xml</include>
+                </includes>
+                <filtering>false</filtering>
+            </resource>
+        </resources>
+    </build>
 </project>

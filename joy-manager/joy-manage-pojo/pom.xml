@@ -5,5 +5,15 @@
     <artifactId>joy-manager</artifactId>
     <version>0.0.1-SNAPSHOT</version>
   </parent>
-  <artifactId>joy-manage-pojo</artifactId>
+   <groupId>joy</groupId>
+    <artifactId>joy-manage-pojo</artifactId>
+    <version>0.0.1-SNAPSHOT</version>
+
+   <dependencies>
+      <dependency>
+        <groupId>joy</groupId>
+        <artifactId>joy-common</artifactId>
+        <version>0.0.1-SNAPSHOT</version>
+      </dependency>
+  </dependencies>
 </project>
