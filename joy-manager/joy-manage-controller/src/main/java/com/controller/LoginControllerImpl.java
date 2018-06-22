@@ -6,6 +6,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 
+import com.bean.UserInfo;
 import com.common.JoyResult;
 import com.pojo.User;
 import com.service.LoginService;
@@ -19,9 +20,9 @@ private LoginService loginServic;
 	public JoyResult login(@RequestParam("tel")String tel,@RequestParam("password")String password) {
 	System.out.println("login服务 进入");
 		User user = loginServic.login(tel, password);
-	System.out.println("查询结束");	
-	System.out.println(user);
-		return new JoyResult(user);
+	System.out.println("查询结束");
+	UserInfo userInfo = new UserInfo(user.getId(), user.getName(), user.getTel(), user.getHeadurl(), user.getGender());
+		return new JoyResult(userInfo);
 	}
 
 

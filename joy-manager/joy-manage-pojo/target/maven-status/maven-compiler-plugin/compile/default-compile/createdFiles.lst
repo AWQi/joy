@@ -1,4 +1,5 @@
 com\pojo\MuscovyplayExample$Criterion.class
+com\bean\UserInfo.class
 com\pojo\Attention.class
 com\pojo\CommentExample$GeneratedCriteria.class
 com\pojo\MuscovyplayExample$Criteria.class
