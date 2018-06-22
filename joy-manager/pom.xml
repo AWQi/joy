@@ -1,0 +1,38 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <parent>
+    <groupId>joy</groupId>
+    <artifactId>joy-parent</artifactId>
+    <version>0.0.1-SNAPSHOT</version>
+  </parent>
+  <groupId>joy</groupId>
+  <artifactId>joy-manager</artifactId>
+  <version>0.0.1-SNAPSHOT</version>
+  <packaging>pom</packaging>
+    <dependencies>
+  	<dependency>
+  	  	<groupId>joy</groupId>
+ 	 	<artifactId>joy-common</artifactId>
+  		<version>0.0.1-SNAPSHOT</version>
+  	</dependency>
+  </dependencies>
+  <modules>
+  	<module>joy-manage-mapper</module>
+  	<module>joy-manage-pojo</module>
+  	<module>joy-manage-service</module>
+  	<module>joy-manage-controller</module>
+  </modules>
+  <build>
+  	<plugins>
+  	<!-- Tomcat  插件 -->
+  		<plugin>
+			<groupId>org.apache.tomcat.maven</groupId>
+			<artifactId>tomcat7-maven-plugin</artifactId>
+  			<configuration>
+  				<port>8080</port>
+  				<path>/</path>
+  			</configuration>
+  		</plugin>
+  	</plugins>
+  </build>
+</project>
