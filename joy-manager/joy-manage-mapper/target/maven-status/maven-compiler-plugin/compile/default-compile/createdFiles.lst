@@ -1,0 +1,7 @@
+com\mapper\UserMapper.class
+com\mapper\AttentionMapper.class
+com\mapper\CommentMapper.class
+com\mapper\DynamicMapper.class
+com\mapper\MuscovyplayMapper.class
+com\mapper\BarrageMapper.class
+com\mapper\StudioMapper.class
