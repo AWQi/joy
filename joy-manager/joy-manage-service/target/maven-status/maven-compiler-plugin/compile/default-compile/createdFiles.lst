@@ -1,2 +1,4 @@
-com\service\LoginServiceImpl.class
 com\service\LoginService.class
+com\service\CommendDynamicsService.class
+com\service\CommendDynamicsServiceImpl.class
+com\service\LoginServiceImpl.class

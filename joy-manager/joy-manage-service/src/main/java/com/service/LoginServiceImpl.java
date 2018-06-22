@@ -20,8 +20,6 @@ private UserMapper userMapper;
 		criteria.andTelEqualTo(tel);
 		criteria.andPasswordEqualTo(pwd);
 		List<User> userList = userMapper.selectByExample(userExample);	
-		System.out.println("tel"+tel);
-		System.out.println("pwd"+pwd);
 		System.out.println(userList.size());
 		if (userList.size()>0) {
 			return userList.get(0);

@@ -16,6 +16,111 @@ CREATE DATABASE /*!32312 IF NOT EXISTS*/`joy` /*!40100 DEFAULT CHARACTER SET utf
 
 USE `joy`;
 
+/*Table structure for table `attention` */
+
+DROP TABLE IF EXISTS `attention`;
+
+CREATE TABLE `attention` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `user_1_id` int(11) NOT NULL COMMENT '关注者',
+  `user_2_id` int(11) NOT NULL COMMENT '被关注者',
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8;
+
+/*Data for the table `attention` */
+
+insert  into `attention`(`id`,`user_1_id`,`user_2_id`) values 
+(1,1,3),
+(2,1,4),
+(3,2,1),
+(4,4,1);
+
+/*Table structure for table `barrage` */
+
+DROP TABLE IF EXISTS `barrage`;
+
+CREATE TABLE `barrage` (
+  `id` int(11) NOT NULL AUTO_INCREMENT COMMENT '弹幕id',
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+/*Data for the table `barrage` */
+
+/*Table structure for table `collection` */
+
+DROP TABLE IF EXISTS `collection`;
+
+CREATE TABLE `collection` (
+  `id` int(11) NOT NULL AUTO_INCREMENT COMMENT '收藏  id',
+  `dyId` int(11) NOT NULL COMMENT '动态  id',
+  `userId` int(11) NOT NULL COMMENT '用户id',
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+/*Data for the table `collection` */
+
+/*Table structure for table `comment` */
+
+DROP TABLE IF EXISTS `comment`;
+
+CREATE TABLE `comment` (
+  `id` int(11) NOT NULL AUTO_INCREMENT COMMENT '评论id',
+  `user_id` int(11) NOT NULL COMMENT '用户id',
+  `synamic_id` int(11) NOT NULL COMMENT '动态id',
+  `content` varchar(100) NOT NULL COMMENT '内容',
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8;
+
+/*Data for the table `comment` */
+
+insert  into `comment`(`id`,`user_id`,`synamic_id`,`content`) values 
+(1,1,3,'good'),
+(2,1,2,'great'),
+(3,1,1,'fine'),
+(4,1,4,'nice');
+
+/*Table structure for table `dynamic` */
+
+DROP TABLE IF EXISTS `dynamic`;
+
+CREATE TABLE `dynamic` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `title` varchar(20) NOT NULL DEFAULT 'up主 很懒什么也没有写' COMMENT '标题',
+  `imageUrl` char(200) NOT NULL COMMENT '封面路径',
+  `introduction` varchar(50) NOT NULL DEFAULT 'up主 很懒什么也没有写' COMMENT '简介',
+  `videoUrl` char(100) NOT NULL COMMENT '内容的路径',
+  `praisesNum` int(11) NOT NULL DEFAULT '0' COMMENT '点赞数',
+  `kind` varchar(20) NOT NULL DEFAULT '未分类' COMMENT '分类',
+  `date` timestamp NULL DEFAULT CURRENT_TIMESTAMP COMMENT '默认填入系统时间',
+  `viewNum` int(11) DEFAULT '0' COMMENT '浏览量',
+  `collNum` int(11) DEFAULT '0' COMMENT '收藏量',
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
+
+/*Data for the table `dynamic` */
+
+insert  into `dynamic`(`id`,`title`,`imageUrl`,`introduction`,`videoUrl`,`praisesNum`,`kind`,`date`,`viewNum`,`collNum`) values 
+(1,'AAA','https://img02.sogoucdn.com/app/a/100520093/12400ee0679b6e1e-d3e639ff657519ea-a9d4d43a8f00e80cfae6b8f74af91564.jpg','AAAAAAAAAAA','https://www.bilibili.com/video/av25373581/?spm_id_from=333.334.bili_douga.12',0,'游戏','2018-06-22 16:05:05',0,0);
+
+/*Table structure for table `muscovyplay` */
+
+DROP TABLE IF EXISTS `muscovyplay`;
+
+CREATE TABLE `muscovyplay` (
+  `id` int(11) NOT NULL AUTO_INCREMENT COMMENT '番剧',
+  `name` varchar(20) NOT NULL,
+  `imageUrl` varchar(50) NOT NULL,
+  `video` varchar(50) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8;
+
+/*Data for the table `muscovyplay` */
+
+insert  into `muscovyplay`(`id`,`name`,`imageUrl`,`video`) values 
+(1,'一人之下','A','A'),
+(2,'王牌御史','A','A'),
+(3,'妖怪名单','A','B');
+
 /*Table structure for table `studio` */
 
 DROP TABLE IF EXISTS `studio`;
@@ -27,103 +132,16 @@ CREATE TABLE `studio` (
   `premiere` int(11) NOT NULL COMMENT '是否开播',
   `studioUrl` varchar(100) NOT NULL COMMENT '直播间 url',
   PRIMARY KEY (`id`),
-  CONSTRAINT `su` FOREIGN KEY (`id`) REFERENCES `tb_user` (`id`) ON UPDATE CASCADE
+  CONSTRAINT `su` FOREIGN KEY (`id`) REFERENCES `user` (`id`) ON UPDATE CASCADE
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 /*Data for the table `studio` */
 
-/*Table structure for table `tb_attention` */
+/*Table structure for table `user` */
 
-DROP TABLE IF EXISTS `tb_attention`;
+DROP TABLE IF EXISTS `user`;
 
-CREATE TABLE `tb_attention` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
-  `user_1_id` int(11) NOT NULL COMMENT '关注者',
-  `user_2_id` int(11) NOT NULL COMMENT '被关注者',
-  PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8;
-
-/*Data for the table `tb_attention` */
-
-insert  into `tb_attention`(`id`,`user_1_id`,`user_2_id`) values 
-(1,1,3),
-(2,1,4),
-(3,2,1),
-(4,4,1);
-
-/*Table structure for table `tb_barrage` */
-
-DROP TABLE IF EXISTS `tb_barrage`;
-
-CREATE TABLE `tb_barrage` (
-  `id` int(11) NOT NULL AUTO_INCREMENT COMMENT '弹幕id',
-  PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
-/*Data for the table `tb_barrage` */
-
-/*Table structure for table `tb_comment` */
-
-DROP TABLE IF EXISTS `tb_comment`;
-
-CREATE TABLE `tb_comment` (
-  `id` int(11) NOT NULL AUTO_INCREMENT COMMENT '评论id',
-  `user_id` int(11) NOT NULL COMMENT '用户id',
-  `synamic_id` int(11) NOT NULL COMMENT '动态id',
-  `content` varchar(100) NOT NULL COMMENT '内容',
-  PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8;
-
-/*Data for the table `tb_comment` */
-
-insert  into `tb_comment`(`id`,`user_id`,`synamic_id`,`content`) values 
-(1,1,3,'good'),
-(2,1,2,'great'),
-(3,1,1,'fine'),
-(4,1,4,'nice');
-
-/*Table structure for table `tb_dynamic` */
-
-DROP TABLE IF EXISTS `tb_dynamic`;
-
-CREATE TABLE `tb_dynamic` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
-  `title` varchar(20) NOT NULL COMMENT '标题',
-  `imageUrl` varbinary(20) DEFAULT NULL COMMENT '封面路径',
-  `introduction` varchar(50) DEFAULT NULL COMMENT '简介',
-  `videoUrl` varchar(40) NOT NULL COMMENT '内容的路径',
-  PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
-
-/*Data for the table `tb_dynamic` */
-
-insert  into `tb_dynamic`(`id`,`title`,`imageUrl`,`introduction`,`videoUrl`) values 
-(1,'AAA',NULL,'AAAAAAAAAAA','Url');
-
-/*Table structure for table `tb_muscovyplay` */
-
-DROP TABLE IF EXISTS `tb_muscovyplay`;
-
-CREATE TABLE `tb_muscovyplay` (
-  `id` int(11) NOT NULL AUTO_INCREMENT COMMENT '番剧',
-  `name` varchar(20) NOT NULL,
-  `imageUrl` varchar(50) NOT NULL,
-  `video` varchar(50) NOT NULL,
-  PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8;
-
-/*Data for the table `tb_muscovyplay` */
-
-insert  into `tb_muscovyplay`(`id`,`name`,`imageUrl`,`video`) values 
-(1,'一人之下','A','A'),
-(2,'王牌御史','A','A'),
-(3,'妖怪名单','A','B');
-
-/*Table structure for table `tb_user` */
-
-DROP TABLE IF EXISTS `tb_user`;
-
-CREATE TABLE `tb_user` (
+CREATE TABLE `user` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `name` varchar(20) NOT NULL DEFAULT 'user' COMMENT '昵称',
   `password` varchar(20) NOT NULL,
@@ -131,17 +149,17 @@ CREATE TABLE `tb_user` (
   `headUrl` varchar(200) NOT NULL DEFAULT 'http://imgsrc.baidu.com/imgad/pic/item/7c1ed21b0ef41bd52a1399d25bda81cb39db3d57.jpg' COMMENT '头像Url',
   `gender` int(11) DEFAULT NULL COMMENT '性别',
   PRIMARY KEY (`id`,`name`,`password`)
-) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=utf8;
 
-/*Data for the table `tb_user` */
+/*Data for the table `user` */
 
-insert  into `tb_user`(`id`,`name`,`password`,`tel`,`headUrl`,`gender`) values 
-(1,'千彧','000000','14232457945','http://imgsrc.baidu.com/imgad/pic/item/7c1ed21b0ef41bd52a1399d25bda81cb39db3d57.jpg',1),
-(2,'残阳','000000','16532417413','http://imgsrc.baidu.com/imgad/pic/item/7c1ed21b0ef41bd52a1399d25bda81cb39db3d57.jpg',2),
-(3,'红尘','000000','18741652310','http://imgsrc.baidu.com/imgad/pic/item/7c1ed21b0ef41bd52a1399d25bda81cb39db3d57.jpg',0),
-(4,'枉生','000000','13265412314','http://imgsrc.baidu.com/imgad/pic/item/7c1ed21b0ef41bd52a1399d25bda81cb39db3d57.jpg',2),
-(5,'古拙','000000','14235476895','http://imgsrc.baidu.com/imgad/pic/item/7c1ed21b0ef41bd52a1399d25bda81cb39db3d57.jpg',2),
-(6,'孑然','000000','13356499599','http://imgsrc.baidu.com/imgad/pic/item/7c1ed21b0ef41bd52a1399d25bda81cb39db3d57.jpg',1);
+insert  into `user`(`id`,`name`,`password`,`tel`,`headUrl`,`gender`) values 
+(1,'千彧','000000','18734741443','http://140.143.16.51/image/a.jpg',1),
+(2,'残阳','000000','16532417413','http://140.143.16.51/image/g.jpg',2),
+(3,'红尘','000000','18741652310','http://140.143.16.51/image/j.jpg',0),
+(4,'枉生','000000','13265412314','http://140.143.16.51/image/k.jpg',2),
+(5,'古拙','000000','14235476895','http://140.143.16.51/image/l.jpg',2),
+(6,'孑然','000000','13356499599','http://140.143.16.51/image/m.jpg',1);
 
 /*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
 /*!40014 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS */;
