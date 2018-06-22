@@ -5,6 +5,8 @@ import java.util.Date;
 public class Dynamic {
     private Integer id;
 
+    private Integer authorid;
+
     private String title;
 
     private String imageurl;
@@ -29,6 +31,14 @@ public class Dynamic {
 
     public void setId(Integer id) {
         this.id = id;
+    }
+
+    public Integer getAuthorid() {
+        return authorid;
+    }
+
+    public void setAuthorid(Integer authorid) {
+        this.authorid = authorid;
     }
 
     public String getTitle() {

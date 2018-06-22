@@ -1,5 +1,7 @@
 package com.service;
 
+import com.bean.DynamicDetails;
+
 public interface DyanmicDetailsService {
-private  DyanmicDetails
+public  DynamicDetails  getDynamicDetials(int id);
 }
