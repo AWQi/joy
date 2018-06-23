@@ -1,4 +1,5 @@
 com\mapper\UserMapper.class
+com\mapper\CollectionMapper.class
 com\mapper\AttentionMapper.class
 com\mapper\CommentMapper.class
 com\mapper\DynamicMapper.class

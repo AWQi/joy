@@ -1,12 +1,15 @@
 com\pojo\MuscovyplayExample$Criterion.class
 com\bean\UserInfo.class
 com\pojo\Attention.class
+com\pojo\CollectionExample.class
 com\pojo\CommentExample$GeneratedCriteria.class
 com\pojo\MuscovyplayExample$Criteria.class
 com\pojo\MuscovyplayExample.class
 com\pojo\BarrageExample$Criterion.class
 com\pojo\DynamicExample$Criterion.class
+com\pojo\CollectionExample$Criterion.class
 com\pojo\CommentExample$Criteria.class
+com\pojo\CollectionExample$GeneratedCriteria.class
 com\pojo\User.class
 com\pojo\DynamicExample$GeneratedCriteria.class
 com\pojo\CommentExample$Criterion.class
@@ -28,6 +31,8 @@ com\pojo\BarrageExample$Criteria.class
 com\pojo\CommentExample.class
 com\pojo\Studio.class
 com\pojo\AttentionExample$Criterion.class
+com\pojo\Collection.class
+com\pojo\CollectionExample$Criteria.class
 com\pojo\AttentionExample.class
 com\pojo\UserExample$Criteria.class
 com\pojo\Muscovyplay.class

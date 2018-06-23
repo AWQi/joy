@@ -55,9 +55,16 @@ CREATE TABLE `collection` (
   `dyId` int(11) NOT NULL COMMENT '动态  id',
   `userId` int(11) NOT NULL COMMENT '用户id',
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8;
 
 /*Data for the table `collection` */
+
+insert  into `collection`(`id`,`dyId`,`userId`) values 
+(1,1,1),
+(2,3,2),
+(3,4,2),
+(4,5,1),
+(5,2,4);
 
 /*Table structure for table `comment` */
 
@@ -66,18 +73,20 @@ DROP TABLE IF EXISTS `comment`;
 CREATE TABLE `comment` (
   `id` int(11) NOT NULL AUTO_INCREMENT COMMENT '评论id',
   `user_id` int(11) NOT NULL COMMENT '用户id',
-  `synamic_id` int(11) NOT NULL COMMENT '动态id',
+  `dynamic_id` int(11) NOT NULL COMMENT '动态id',
   `content` varchar(100) NOT NULL COMMENT '内容',
+  `date` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT '时间',
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8;
 
 /*Data for the table `comment` */
 
-insert  into `comment`(`id`,`user_id`,`synamic_id`,`content`) values 
-(1,1,3,'good'),
-(2,1,2,'great'),
-(3,1,1,'fine'),
-(4,1,4,'nice');
+insert  into `comment`(`id`,`user_id`,`dynamic_id`,`content`,`date`) values 
+(1,1,3,'good','2018-06-23 07:19:25'),
+(2,1,2,'great','2018-06-23 07:19:25'),
+(3,1,1,'fine','2018-06-23 07:19:25'),
+(4,1,4,'nice','2018-06-23 07:19:25'),
+(5,2,1,'well','2018-06-23 08:13:00');
 
 /*Table structure for table `dynamic` */
 
@@ -85,6 +94,7 @@ DROP TABLE IF EXISTS `dynamic`;
 
 CREATE TABLE `dynamic` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
+  `authorId` int(11) NOT NULL COMMENT '作者 id',
   `title` varchar(20) NOT NULL DEFAULT 'up主 很懒什么也没有写' COMMENT '标题',
   `imageUrl` char(200) NOT NULL COMMENT '封面路径',
   `introduction` varchar(50) NOT NULL DEFAULT 'up主 很懒什么也没有写' COMMENT '简介',
@@ -95,12 +105,18 @@ CREATE TABLE `dynamic` (
   `viewNum` int(11) DEFAULT '0' COMMENT '浏览量',
   `collNum` int(11) DEFAULT '0' COMMENT '收藏量',
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=utf8;
 
 /*Data for the table `dynamic` */
 
-insert  into `dynamic`(`id`,`title`,`imageUrl`,`introduction`,`videoUrl`,`praisesNum`,`kind`,`date`,`viewNum`,`collNum`) values 
-(1,'AAA','https://img02.sogoucdn.com/app/a/100520093/12400ee0679b6e1e-d3e639ff657519ea-a9d4d43a8f00e80cfae6b8f74af91564.jpg','AAAAAAAAAAA','https://www.bilibili.com/video/av25373581/?spm_id_from=333.334.bili_douga.12',0,'游戏','2018-06-22 16:05:05',0,0);
+insert  into `dynamic`(`id`,`authorId`,`title`,`imageUrl`,`introduction`,`videoUrl`,`praisesNum`,`kind`,`date`,`viewNum`,`collNum`) values 
+(1,1,'AAA','https://img02.sogoucdn.com/app/a/100520093/12400ee0679b6e1e-d3e639ff657519ea-a9d4d43a8f00e80cfae6b8f74af91564.jpg','AAAAAAAAAAA','https://www.bilibili.com/video/av25373581/?spm_id_from=333.334.bili_douga.12',80,'游戏','2018-06-22 16:05:05',50,1),
+(2,5,'BBB','https://img02.sogoucdn.com/app/a/100520093/12400ee0679b6e1e-d3e639ff657519ea-a9d4d43a8f00e80cfae6b8f74af91564.jpg','up主 很懒什么也没有写','https://www.bilibili.com/video/av25373581/?spm_id_from=333.334.bili_douga.12',30,'动漫','2018-06-22 19:30:30',30,10),
+(3,2,'CCC','https://img02.sogoucdn.com/app/a/100520093/12400ee0679b6e1e-d3e639ff657519ea-a9d4d43a8f00e80cfae6b8f74af91564.jpg','up主 很懒什么也没有写','https://www.bilibili.com/video/av25373581/?spm_id_from=333.334.bili_douga.12',60,'音乐','2018-06-22 19:31:58',40,50),
+(4,4,'DDD','https://img02.sogoucdn.com/app/a/100520093/12400ee0679b6e1e-d3e639ff657519ea-a9d4d43a8f00e80cfae6b8f74af91564.jpg','up主 很懒什么也没有写','https://www.bilibili.com/video/av25373581/?spm_id_from=333.334.bili_douga.12',0,'生活','2018-06-22 19:35:23',25,0),
+(5,1,'EEE','https://img02.sogoucdn.com/app/a/100520093/12400ee0679b6e1e-d3e639ff657519ea-a9d4d43a8f00e80cfae6b8f74af91564.jpg','up主 很懒什么也没有写','https://www.bilibili.com/video/av25373581/?spm_id_from=333.334.bili_douga.12',0,'时尚','2018-06-22 19:37:58',38,0),
+(6,3,'up主 很懒什么也没有写','https://img02.sogoucdn.com/app/a/100520093/12400ee0679b6e1e-d3e639ff657519ea-a9d4d43a8f00e80cfae6b8f74af91564.jpg','up主 很懒什么也没有写','https://www.bilibili.com/video/av25373581/?spm_id_from=333.334.bili_douga.12',0,'未分类','2018-06-22 19:38:55',41,0),
+(7,5,'GGG','https://img02.sogoucdn.com/app/a/100520093/12400ee0679b6e1e-d3e639ff657519ea-a9d4d43a8f00e80cfae6b8f74af91564.jpg','Ada','https://www.bilibili.com/video/av25373581/?spm_id_from=333.334.bili_douga.12',0,'未分类','2018-06-22 19:39:46',20,0);
 
 /*Table structure for table `muscovyplay` */
 
@@ -154,12 +170,12 @@ CREATE TABLE `user` (
 /*Data for the table `user` */
 
 insert  into `user`(`id`,`name`,`password`,`tel`,`headUrl`,`gender`) values 
-(1,'千彧','000000','18734741443','http://140.143.16.51/image/a.jpg',1),
-(2,'残阳','000000','16532417413','http://140.143.16.51/image/g.jpg',2),
-(3,'红尘','000000','18741652310','http://140.143.16.51/image/j.jpg',0),
-(4,'枉生','000000','13265412314','http://140.143.16.51/image/k.jpg',2),
-(5,'古拙','000000','14235476895','http://140.143.16.51/image/l.jpg',2),
-(6,'孑然','000000','13356499599','http://140.143.16.51/image/m.jpg',1);
+(1,'千彧','000000','18734741443','http://140.143.16.51/image/head/a.jpg',1),
+(2,'残阳','000000','16532417413','http://140.143.16.51/image/head/g.jpg',2),
+(3,'红尘','000000','18741652310','http://140.143.16.51/image/head/j.jpg',0),
+(4,'枉生','000000','13265412314','http://140.143.16.51/image/head/k.jpg',2),
+(5,'古拙','000000','14235476895','http://140.143.16.51/image/head/l.jpg',2),
+(6,'孑然','000000','13356499599','http://140.143.16.51/image/head/m.jpg',1);
 
 /*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
 /*!40014 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS */;

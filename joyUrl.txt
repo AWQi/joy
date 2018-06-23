@@ -6,3 +6,9 @@
 	（包括动态信息及评论）
 评论	 http://localhost:8080/getComment?dynamicId=1
 相关推荐  http://localhost:8080/RelevantRecom?kind=%E6%B8%B8%E6%88%8F
+
+
+收藏：
+   查看收藏 ：http://localhost:8080/queryDynamicCollect?userId=2
+   添加收藏：http://localhost:8080/addDynamicCollect?dynamicId=1&userId=2
+   删除收藏：http://localhost:8080/deleteDynamicCollect?dynamicId=1&userId=2

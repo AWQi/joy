@@ -18,7 +18,7 @@ import com.pojo.User;
 import com.pojo.UserExample;
 import com.pojo.UserExample.Criteria;
 @Service
-public class DynamicDetialsServiceImpl implements DyanmicAuthorService {
+public class DynamicAuthorServiceImpl implements DyanmicAuthorService {
 
 @Autowired
 private UserMapper userMapper;
