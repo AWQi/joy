@@ -1,5 +1,7 @@
 package com.controller;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -32,6 +34,20 @@ public JoyResult register(@RequestParam("userInfo")String userInfo) {
 	User user = JsonUtils.jsonToPojo(userInfo, User.class);
 	userInfoServic.Register(user);
 	return JoyResult.build(200,"注册成功！");
+}
+@RequestMapping("myFans")
+@ResponseBody
+@Override
+public JoyResult myFans(@RequestParam("userId")int userId) {
+	List<UserInfo> userInfoList = userInfoServic.myFans(userId);
+	return new JoyResult(userInfoList);
+}
+@RequestMapping("myAttention")
+@ResponseBody
+@Override
+public JoyResult myAttention(@RequestParam("userId")int userId) {
+	List<UserInfo> userInfoList = userInfoServic.myAttention(userId);
+	return new JoyResult(userInfoServic);
 }
 
 }

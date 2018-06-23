@@ -1,6 +1,6 @@
 package com.test;
 
-public class UserInfo  {
+public class UserJson  {
 	private String password;
 	private String name;
     private String tel;
@@ -8,7 +8,7 @@ public class UserInfo  {
     private Integer gender;
     
 
-	public UserInfo(String password, String name, String tel, String headurl, Integer gender) {
+	public UserJson(String password, String name, String tel, String headurl, Integer gender) {
 		super();
 		this.password = password;
 		this.name = name;

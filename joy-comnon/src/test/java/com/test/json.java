@@ -30,7 +30,7 @@ public class json {
 
 	@Test
 	public void test() {
-		UserInfo userInfo = new UserInfo("000000", "AWQI","18734741443","http://140.143.16.51/image/head/c.jpg", 1);
+		UserJson userInfo = new UserJson("000000", "AWQI","18734741443","http://140.143.16.51/image/head/c.jpg", 1);
 		String j = JsonUtils.objectToJson(userInfo);
 		System.out.println("userInfo="+j);
 		
