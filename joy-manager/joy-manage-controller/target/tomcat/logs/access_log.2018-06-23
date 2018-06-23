@@ -1,3 +1,0 @@
-0:0:0:0:0:0:0:1 - - [23/Jun/2018:15:47:45 +0800] "GET /register?userId=2 HTTP/1.1" 400 1070 http-bio-8080-exec-1 73
-0:0:0:0:0:0:0:1 - - [23/Jun/2018:15:47:56 +0800] "GET /myFans?userId=2 HTTP/1.1" 200 46 http-bio-8080-exec-2 456
-0:0:0:0:0:0:0:1 - - [23/Jun/2018:15:48:21 +0800] "GET /myFans?userId=3 HTTP/1.1" 200 151 http-bio-8080-exec-3 26
