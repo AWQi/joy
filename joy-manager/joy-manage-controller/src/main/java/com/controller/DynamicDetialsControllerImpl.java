@@ -8,24 +8,49 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 
+import com.bean.CommentInfo;
 import com.bean.DynamicDetails;
+import com.bean.UserInfo;
 import com.common.JoyResult;
 import com.pojo.Dynamic;
-import com.service.DyanmicDetailsService;
+import com.pojo.User;
+import com.service.CommentService;
+import com.service.DyanmicAuthorService;
 import com.service.RelevantRecomService;
 
 @Controller
 public class DynamicDetialsControllerImpl implements DynamicDetialsController{
+	
+	
+	
 @Autowired
-private DyanmicDetailsService dyanmicDetailsService;
-@RequestMapping("getDynamicDetials")
+private DyanmicAuthorService dyanmicAuthorService;
+@RequestMapping("getDynamicAuthor")
 @ResponseBody
 @Override
-public JoyResult getDynamicDetials(@RequestParam(value="dynamicId",defaultValue="1") int dynamicId, @RequestParam("authorId") int authorId) {
-	DynamicDetails dynamicDetails = dyanmicDetailsService.getDynamicDetials(dynamicId, authorId);
+public JoyResult getDynamicAuthor( @RequestParam(value="authorId",defaultValue="0") int authorId) {
+	UserInfo author= dyanmicAuthorService.getDynamicAuthor(authorId);
 	
-	return new JoyResult(dynamicDetails);
+	return new JoyResult(author);
 }
+
+
+
+
+
+@Autowired
+private CommentService commentService;
+@RequestMapping("getComment")
+@ResponseBody
+@Override
+public JoyResult getComment(@RequestParam(value="dynamicId",defaultValue="0")int dynamicId) {
+	List<CommentInfo> commentInfoList = commentService.getComment(dynamicId);
+	return new JoyResult(commentInfoList);
+}
+
+
+
+
 @Autowired
 private RelevantRecomService relevantRecomService;
 @RequestMapping("RelevantRecom")
@@ -35,5 +60,6 @@ public JoyResult RelevantRecom(@RequestParam("kind")String kind) {
 	System.out.println("kind   " + kind);
 	List<Dynamic> dynamicList = relevantRecomService.RelevantRecom(kind);
 	return new JoyResult(dynamicList);
-}	
+}
+	
 }

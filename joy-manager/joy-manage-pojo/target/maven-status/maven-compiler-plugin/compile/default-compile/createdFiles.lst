@@ -17,6 +17,7 @@ com\pojo\DynamicExample.class
 com\pojo\UserExample$GeneratedCriteria.class
 com\pojo\AttentionExample$Criteria.class
 com\pojo\BarrageExample.class
+com\bean\CommentInfo.class
 com\pojo\UserExample.class
 com\pojo\Dynamic.class
 com\pojo\Barrage.class
