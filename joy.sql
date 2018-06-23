@@ -55,7 +55,7 @@ CREATE TABLE `collection` (
   `dyId` int(11) NOT NULL COMMENT '动态  id',
   `userId` int(11) NOT NULL COMMENT '用户id',
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=9 DEFAULT CHARSET=utf8;
 
 /*Data for the table `collection` */
 
@@ -64,7 +64,8 @@ insert  into `collection`(`id`,`dyId`,`userId`) values
 (2,3,2),
 (3,4,2),
 (4,5,1),
-(5,2,4);
+(5,2,4),
+(6,4,1);
 
 /*Table structure for table `comment` */
 
@@ -165,7 +166,7 @@ CREATE TABLE `user` (
   `headUrl` varchar(200) NOT NULL DEFAULT 'http://imgsrc.baidu.com/imgad/pic/item/7c1ed21b0ef41bd52a1399d25bda81cb39db3d57.jpg' COMMENT '头像Url',
   `gender` int(11) DEFAULT NULL COMMENT '性别',
   PRIMARY KEY (`id`,`name`,`password`)
-) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=10 DEFAULT CHARSET=utf8;
 
 /*Data for the table `user` */
 

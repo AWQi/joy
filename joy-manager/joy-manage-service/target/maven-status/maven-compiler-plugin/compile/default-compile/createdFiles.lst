@@ -1,11 +1,11 @@
 com\service\CommentServiceImpl.class
 com\service\DyanmicAuthorService.class
 com\service\DynamicAuthorServiceImpl.class
+com\service\UserInfoServiceImpl.class
 com\service\CommendDynamicsServiceImpl.class
-com\service\LoginServiceImpl.class
+com\service\UserInfoService.class
 com\service\DynamicCollectServiceImpl.class
 com\service\DynamicCollectService.class
-com\service\LoginService.class
 com\service\CommendDynamicsService.class
 com\service\CommentService.class
 com\service\RelevantRecomService.class

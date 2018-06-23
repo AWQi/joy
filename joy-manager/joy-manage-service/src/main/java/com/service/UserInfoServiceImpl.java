@@ -10,11 +10,11 @@ import com.pojo.User;
 import com.pojo.UserExample;
 import com.pojo.UserExample.Criteria;
 @Service
-public class LoginServiceImpl implements LoginService{
+public class UserInfoServiceImpl implements UserInfoService{
 @Autowired	
 private UserMapper userMapper;
 	@Override
-	public User login(String tel, String pwd) {
+	public User UserInfo(String tel, String pwd) {
 		UserExample userExample = new UserExample();
 		Criteria criteria = userExample.createCriteria();
 		criteria.andTelEqualTo(tel);
@@ -27,6 +27,10 @@ private UserMapper userMapper;
 			return null;
 		}
 
+	}
+	@Override
+	public void Register(User user) {
+		userMapper.insert(user);
 	}
 
 }

@@ -1,4 +1,6 @@
 登录        http://localhost:8080/login?tel=18734741443&password=000000
+注册      http://localhost:8080/register?userInfo={%22password%22:%22000000%22,%22name%22:%22AWQI%22,%22tel%22:%2218734741443%22,%22headurl%22:%22http://140.143.16.51/image/head/c.jpg%22,%22gender%22:1}
+
 
 推荐动态  http://localhost:8080/CommendDynamics?page=1
 
@@ -12,3 +14,4 @@
    查看收藏 ：http://localhost:8080/queryDynamicCollect?userId=2
    添加收藏：http://localhost:8080/addDynamicCollect?dynamicId=1&userId=2
    删除收藏：http://localhost:8080/deleteDynamicCollect?dynamicId=1&userId=2
+
