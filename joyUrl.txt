@@ -1,4 +1,7 @@
 登录        http://localhost:8080/login?tel=18734741443&password=000000
 
+推荐动态  http://localhost:8080/CommendDynamics?page=1
 
 动态详情  http://localhost:8080/getDynamicDetials?dynamic=1&authorId=1
+	（包括动态信息及评论）	
+相关推荐  http://localhost:8080/RelevantRecom?kind=%E6%B8%B8%E6%88%8F

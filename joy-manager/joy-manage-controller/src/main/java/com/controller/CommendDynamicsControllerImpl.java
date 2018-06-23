@@ -23,4 +23,5 @@ private CommendDynamicsService commendDynamicsService;
 		return new JoyResult(dynamicList);
 	}
 
+
 }
