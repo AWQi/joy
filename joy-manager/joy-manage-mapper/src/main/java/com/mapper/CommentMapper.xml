@@ -4,8 +4,9 @@
   <resultMap id="BaseResultMap" type="com.pojo.Comment" >
     <id column="id" property="id" jdbcType="INTEGER" />
     <result column="user_id" property="userId" jdbcType="INTEGER" />
-    <result column="synamic_id" property="synamicId" jdbcType="INTEGER" />
+    <result column="dynamic_id" property="dynamicId" jdbcType="INTEGER" />
     <result column="content" property="content" jdbcType="VARCHAR" />
+    <result column="date" property="date" jdbcType="TIMESTAMP" />
   </resultMap>
   <sql id="Example_Where_Clause" >
     <where >
@@ -66,7 +67,7 @@
     </where>
   </sql>
   <sql id="Base_Column_List" >
-    id, user_id, synamic_id, content
+    id, user_id, dynamic_id, content, date
   </sql>
   <select id="selectByExample" resultMap="BaseResultMap" parameterType="com.pojo.CommentExample" >
     select
@@ -99,10 +100,10 @@
     </if>
   </delete>
   <insert id="insert" parameterType="com.pojo.Comment" >
-    insert into comment (id, user_id, synamic_id, 
-      content)
-    values (#{id,jdbcType=INTEGER}, #{userId,jdbcType=INTEGER}, #{synamicId,jdbcType=INTEGER}, 
-      #{content,jdbcType=VARCHAR})
+    insert into comment (id, user_id, dynamic_id, 
+      content, date)
+    values (#{id,jdbcType=INTEGER}, #{userId,jdbcType=INTEGER}, #{dynamicId,jdbcType=INTEGER}, 
+      #{content,jdbcType=VARCHAR}, #{date,jdbcType=TIMESTAMP})
   </insert>
   <insert id="insertSelective" parameterType="com.pojo.Comment" >
     insert into comment
@@ -113,11 +114,14 @@
       <if test="userId != null" >
         user_id,
       </if>
-      <if test="synamicId != null" >
-        synamic_id,
+      <if test="dynamicId != null" >
+        dynamic_id,
       </if>
       <if test="content != null" >
         content,
+      </if>
+      <if test="date != null" >
+        date,
       </if>
     </trim>
     <trim prefix="values (" suffix=")" suffixOverrides="," >
@@ -127,11 +131,14 @@
       <if test="userId != null" >
         #{userId,jdbcType=INTEGER},
       </if>
-      <if test="synamicId != null" >
-        #{synamicId,jdbcType=INTEGER},
+      <if test="dynamicId != null" >
+        #{dynamicId,jdbcType=INTEGER},
       </if>
       <if test="content != null" >
         #{content,jdbcType=VARCHAR},
+      </if>
+      <if test="date != null" >
+        #{date,jdbcType=TIMESTAMP},
       </if>
     </trim>
   </insert>
@@ -150,11 +157,14 @@
       <if test="record.userId != null" >
         user_id = #{record.userId,jdbcType=INTEGER},
       </if>
-      <if test="record.synamicId != null" >
-        synamic_id = #{record.synamicId,jdbcType=INTEGER},
+      <if test="record.dynamicId != null" >
+        dynamic_id = #{record.dynamicId,jdbcType=INTEGER},
       </if>
       <if test="record.content != null" >
         content = #{record.content,jdbcType=VARCHAR},
+      </if>
+      <if test="record.date != null" >
+        date = #{record.date,jdbcType=TIMESTAMP},
       </if>
     </set>
     <if test="_parameter != null" >
@@ -165,8 +175,9 @@
     update comment
     set id = #{record.id,jdbcType=INTEGER},
       user_id = #{record.userId,jdbcType=INTEGER},
-      synamic_id = #{record.synamicId,jdbcType=INTEGER},
-      content = #{record.content,jdbcType=VARCHAR}
+      dynamic_id = #{record.dynamicId,jdbcType=INTEGER},
+      content = #{record.content,jdbcType=VARCHAR},
+      date = #{record.date,jdbcType=TIMESTAMP}
     <if test="_parameter != null" >
       <include refid="Update_By_Example_Where_Clause" />
     </if>
@@ -177,11 +188,14 @@
       <if test="userId != null" >
         user_id = #{userId,jdbcType=INTEGER},
       </if>
-      <if test="synamicId != null" >
-        synamic_id = #{synamicId,jdbcType=INTEGER},
+      <if test="dynamicId != null" >
+        dynamic_id = #{dynamicId,jdbcType=INTEGER},
       </if>
       <if test="content != null" >
         content = #{content,jdbcType=VARCHAR},
+      </if>
+      <if test="date != null" >
+        date = #{date,jdbcType=TIMESTAMP},
       </if>
     </set>
     where id = #{id,jdbcType=INTEGER}
@@ -189,8 +203,9 @@
   <update id="updateByPrimaryKey" parameterType="com.pojo.Comment" >
     update comment
     set user_id = #{userId,jdbcType=INTEGER},
-      synamic_id = #{synamicId,jdbcType=INTEGER},
-      content = #{content,jdbcType=VARCHAR}
+      dynamic_id = #{dynamicId,jdbcType=INTEGER},
+      content = #{content,jdbcType=VARCHAR},
+      date = #{date,jdbcType=TIMESTAMP}
     where id = #{id,jdbcType=INTEGER}
   </update>
 </mapper>

@@ -1,4 +1,6 @@
+com\controller\CommendDynamicsController.class
+com\controller\DynamicDetialsControllerImpl.class
+com\controller\CommendDynamicsControllerImpl.class
+com\controller\DynamicDetialsController.class
 com\controller\LoginController.class
 com\controller\LoginControllerImpl.class
-com\controller\CommendDynamicsController.class
-com\controller\CommendDynamicsControllerImpl.class

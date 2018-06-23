@@ -1,1 +1,4 @@
 µÇÂ¼        http://localhost:8080/login?tel=18734741443&password=000000
+
+
+¶¯Ì¬ÏêÇé  http://localhost:8080/getDynamicDetials?dynamic=1&authorId=1

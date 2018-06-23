@@ -1,13 +1,17 @@
 package com.pojo;
 
+import java.util.Date;
+
 public class Comment {
     private Integer id;
 
     private Integer userId;
 
-    private Integer synamicId;
+    private Integer dynamicId;
 
     private String content;
+
+    private Date date;
 
     public Integer getId() {
         return id;
@@ -25,12 +29,12 @@ public class Comment {
         this.userId = userId;
     }
 
-    public Integer getSynamicId() {
-        return synamicId;
+    public Integer getDynamicId() {
+        return dynamicId;
     }
 
-    public void setSynamicId(Integer synamicId) {
-        this.synamicId = synamicId;
+    public void setDynamicId(Integer dynamicId) {
+        this.dynamicId = dynamicId;
     }
 
     public String getContent() {
@@ -39,5 +43,13 @@ public class Comment {
 
     public void setContent(String content) {
         this.content = content == null ? null : content.trim();
+    }
+
+    public Date getDate() {
+        return date;
+    }
+
+    public void setDate(Date date) {
+        this.date = date;
     }
 }

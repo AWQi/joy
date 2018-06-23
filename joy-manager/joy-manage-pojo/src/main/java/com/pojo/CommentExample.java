@@ -1,6 +1,7 @@
 package com.pojo;
 
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 
 public class CommentExample {
@@ -224,63 +225,63 @@ public class CommentExample {
             return (Criteria) this;
         }
 
-        public Criteria andSynamicIdIsNull() {
-            addCriterion("synamic_id is null");
+        public Criteria andDynamicIdIsNull() {
+            addCriterion("dynamic_id is null");
             return (Criteria) this;
         }
 
-        public Criteria andSynamicIdIsNotNull() {
-            addCriterion("synamic_id is not null");
+        public Criteria andDynamicIdIsNotNull() {
+            addCriterion("dynamic_id is not null");
             return (Criteria) this;
         }
 
-        public Criteria andSynamicIdEqualTo(Integer value) {
-            addCriterion("synamic_id =", value, "synamicId");
+        public Criteria andDynamicIdEqualTo(Integer value) {
+            addCriterion("dynamic_id =", value, "dynamicId");
             return (Criteria) this;
         }
 
-        public Criteria andSynamicIdNotEqualTo(Integer value) {
-            addCriterion("synamic_id <>", value, "synamicId");
+        public Criteria andDynamicIdNotEqualTo(Integer value) {
+            addCriterion("dynamic_id <>", value, "dynamicId");
             return (Criteria) this;
         }
 
-        public Criteria andSynamicIdGreaterThan(Integer value) {
-            addCriterion("synamic_id >", value, "synamicId");
+        public Criteria andDynamicIdGreaterThan(Integer value) {
+            addCriterion("dynamic_id >", value, "dynamicId");
             return (Criteria) this;
         }
 
-        public Criteria andSynamicIdGreaterThanOrEqualTo(Integer value) {
-            addCriterion("synamic_id >=", value, "synamicId");
+        public Criteria andDynamicIdGreaterThanOrEqualTo(Integer value) {
+            addCriterion("dynamic_id >=", value, "dynamicId");
             return (Criteria) this;
         }
 
-        public Criteria andSynamicIdLessThan(Integer value) {
-            addCriterion("synamic_id <", value, "synamicId");
+        public Criteria andDynamicIdLessThan(Integer value) {
+            addCriterion("dynamic_id <", value, "dynamicId");
             return (Criteria) this;
         }
 
-        public Criteria andSynamicIdLessThanOrEqualTo(Integer value) {
-            addCriterion("synamic_id <=", value, "synamicId");
+        public Criteria andDynamicIdLessThanOrEqualTo(Integer value) {
+            addCriterion("dynamic_id <=", value, "dynamicId");
             return (Criteria) this;
         }
 
-        public Criteria andSynamicIdIn(List<Integer> values) {
-            addCriterion("synamic_id in", values, "synamicId");
+        public Criteria andDynamicIdIn(List<Integer> values) {
+            addCriterion("dynamic_id in", values, "dynamicId");
             return (Criteria) this;
         }
 
-        public Criteria andSynamicIdNotIn(List<Integer> values) {
-            addCriterion("synamic_id not in", values, "synamicId");
+        public Criteria andDynamicIdNotIn(List<Integer> values) {
+            addCriterion("dynamic_id not in", values, "dynamicId");
             return (Criteria) this;
         }
 
-        public Criteria andSynamicIdBetween(Integer value1, Integer value2) {
-            addCriterion("synamic_id between", value1, value2, "synamicId");
+        public Criteria andDynamicIdBetween(Integer value1, Integer value2) {
+            addCriterion("dynamic_id between", value1, value2, "dynamicId");
             return (Criteria) this;
         }
 
-        public Criteria andSynamicIdNotBetween(Integer value1, Integer value2) {
-            addCriterion("synamic_id not between", value1, value2, "synamicId");
+        public Criteria andDynamicIdNotBetween(Integer value1, Integer value2) {
+            addCriterion("dynamic_id not between", value1, value2, "dynamicId");
             return (Criteria) this;
         }
 
@@ -351,6 +352,66 @@ public class CommentExample {
 
         public Criteria andContentNotBetween(String value1, String value2) {
             addCriterion("content not between", value1, value2, "content");
+            return (Criteria) this;
+        }
+
+        public Criteria andDateIsNull() {
+            addCriterion("date is null");
+            return (Criteria) this;
+        }
+
+        public Criteria andDateIsNotNull() {
+            addCriterion("date is not null");
+            return (Criteria) this;
+        }
+
+        public Criteria andDateEqualTo(Date value) {
+            addCriterion("date =", value, "date");
+            return (Criteria) this;
+        }
+
+        public Criteria andDateNotEqualTo(Date value) {
+            addCriterion("date <>", value, "date");
+            return (Criteria) this;
+        }
+
+        public Criteria andDateGreaterThan(Date value) {
+            addCriterion("date >", value, "date");
+            return (Criteria) this;
+        }
+
+        public Criteria andDateGreaterThanOrEqualTo(Date value) {
+            addCriterion("date >=", value, "date");
+            return (Criteria) this;
+        }
+
+        public Criteria andDateLessThan(Date value) {
+            addCriterion("date <", value, "date");
+            return (Criteria) this;
+        }
+
+        public Criteria andDateLessThanOrEqualTo(Date value) {
+            addCriterion("date <=", value, "date");
+            return (Criteria) this;
+        }
+
+        public Criteria andDateIn(List<Date> values) {
+            addCriterion("date in", values, "date");
+            return (Criteria) this;
+        }
+
+        public Criteria andDateNotIn(List<Date> values) {
+            addCriterion("date not in", values, "date");
+            return (Criteria) this;
+        }
+
+        public Criteria andDateBetween(Date value1, Date value2) {
+            addCriterion("date between", value1, value2, "date");
+            return (Criteria) this;
+        }
+
+        public Criteria andDateNotBetween(Date value1, Date value2) {
+            addCriterion("date not between", value1, value2, "date");
             return (Criteria) this;
         }
     }

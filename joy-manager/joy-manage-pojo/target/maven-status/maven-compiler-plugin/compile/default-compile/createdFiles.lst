@@ -11,6 +11,7 @@ com\pojo\User.class
 com\pojo\DynamicExample$GeneratedCriteria.class
 com\pojo\CommentExample$Criterion.class
 com\pojo\MuscovyplayExample$GeneratedCriteria.class
+com\bean\DynamicDetails.class
 com\pojo\UserKey.class
 com\pojo\DynamicExample.class
 com\pojo\UserExample$GeneratedCriteria.class

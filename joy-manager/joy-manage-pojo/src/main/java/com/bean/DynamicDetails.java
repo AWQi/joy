@@ -6,72 +6,36 @@ import com.pojo.Comment;
 
 public class DynamicDetails {
     private int id;
-    private  String  title ;
-    private String imageURL;
-    private String videoURL;
-    private int praiseNum;
-    private int commentsNum;
-    private String kind;
     private int authorId;
     private String authorName;
     private String authorHeadUrl;
     private List<Comment> commentList;
+    private List<String> commentAuthorHeadList;
+    private List<Integer> commentAuthorIdList;
     
-	public DynamicDetails(int id, String title, String imageURL, String videoURL, int praiseNum, int commentsNum,
-			String kind, int authorId, String authorName, String authorHeadUrl) {
+    
+	public DynamicDetails(int id, int authorId, String authorName, String authorHeadUrl, List<Comment> commentList,
+			List<String> commentAuthorHeadList, List<Integer> commentAuthorIdList) {
 		super();
 		this.id = id;
-		this.title = title;
-		this.imageURL = imageURL;
-		this.videoURL = videoURL;
-		this.praiseNum = praiseNum;
-		this.commentsNum = commentsNum;
-		this.kind = kind;
 		this.authorId = authorId;
 		this.authorName = authorName;
 		this.authorHeadUrl = authorHeadUrl;
+		this.commentList = commentList;
+		this.commentAuthorHeadList = commentAuthorHeadList;
+		this.commentAuthorIdList = commentAuthorIdList;
+	}
+	public List<String> getCommentAuthorHeadList() {
+		return commentAuthorHeadList;
+	}
+	public void setCommentAuthorHeadList(List<String> commentAuthorHead) {
+		this.commentAuthorHeadList = commentAuthorHead;
 	}
 	public int getId() {
 		return id;
 	}
 	public void setId(int id) {
 		this.id = id;
-	}
-	public String getTitle() {
-		return title;
-	}
-	public void setTitle(String title) {
-		this.title = title;
-	}
-	public String getImageURL() {
-		return imageURL;
-	}
-	public void setImageURL(String imageURL) {
-		this.imageURL = imageURL;
-	}
-	public String getVideoURL() {
-		return videoURL;
-	}
-	public void setVideoURL(String videoURL) {
-		this.videoURL = videoURL;
-	}
-	public int getPraiseNum() {
-		return praiseNum;
-	}
-	public void setPraiseNum(int praiseNum) {
-		this.praiseNum = praiseNum;
-	}
-	public int getCommentsNum() {
-		return commentsNum;
-	}
-	public void setCommentsNum(int commentsNum) {
-		this.commentsNum = commentsNum;
-	}
-	public String getKind() {
-		return kind;
-	}
-	public void setKind(String kind) {
-		this.kind = kind;
 	}
 	public int getAuthorId() {
 		return authorId;
@@ -96,6 +60,12 @@ public class DynamicDetails {
 	}
 	public void setCommentList(List<Comment> commentList) {
 		this.commentList = commentList;
+	}
+	public List<Integer> getCommentAuthorIdList() {
+		return commentAuthorIdList;
+	}
+	public void setCommentAuthorIdList(List<Integer> commentAuthorIdList) {
+		this.commentAuthorIdList = commentAuthorIdList;
 	}
     
 }
