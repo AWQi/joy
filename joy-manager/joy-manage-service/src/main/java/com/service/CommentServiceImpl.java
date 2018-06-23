@@ -48,5 +48,13 @@ private UserMapper userMapper;
 		 }
 		return commentInfoList;
 	}
-
+	@Override
+	public void addComment(Comment comment) {
+		commentMapper.insert(comment);
+	}
+	@Override
+	public void deleteComment(int commentId) {
+		commentMapper.deleteByPrimaryKey(commentId);
+	}
+	
 }

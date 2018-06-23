@@ -20,6 +20,9 @@ public class UserInfoServiceImpl implements UserInfoService{
 private UserMapper userMapper;
 @Autowired
 private AttentionMapper attentionMapper;
+/**
+ *  查用户信息
+ */
 	@Override
 	public User UserInfo(String tel, String pwd) {
 		UserExample userExample = new UserExample();
@@ -40,6 +43,10 @@ private AttentionMapper attentionMapper;
 		userMapper.insert(user);
 	}
 	
+	/**
+	 * 
+	 *  查询  粉丝
+	 */
 	@Override
 	public List<UserInfo> myFans(int userId) {
 		AttentionExample attentionExample = new AttentionExample();
@@ -58,6 +65,11 @@ private AttentionMapper attentionMapper;
 		}
 		return fansList;
 	}
+	/**
+	 * 
+	 *  查  我的关注
+	 *   
+	 */
 	@Override
 	public List<UserInfo> myAttention(int userId) {
 		AttentionExample attentionExample = new AttentionExample();
@@ -75,6 +87,27 @@ private AttentionMapper attentionMapper;
 		myAttentList.add(userInfo);
 		}
 		return myAttentList;
+	}
+	/**
+	 * 
+	 *  关注
+	 */
+	@Override
+	public void addAttention(Attention attention) {
+		attentionMapper.insert(attention);
+	}
+	/**
+	 * 
+	 *  取消关注
+	 */
+	
+	@Override
+	public void deleteAttention(Attention attention) {
+		AttentionExample attentionExample = new AttentionExample();
+		com.pojo.AttentionExample.Criteria criteria = attentionExample.createCriteria();
+		criteria.andUser1IdEqualTo(attention.getUser1Id());
+		criteria.andUser2IdEqualTo(attention.getUser2Id());
+		attentionMapper.deleteByExample(attentionExample);
 	}
 
 }

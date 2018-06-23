@@ -15,5 +15,7 @@
    添加收藏：http://localhost:8080/addDynamicCollect?dynamicId=1&userId=2
    删除收藏：http://localhost:8080/deleteDynamicCollect?dynamicId=1&userId=2
 
-关注    http://localhost:8080/myFans?userId=3
+查看关注    http://localhost:8080/myFans?userId=3
 粉丝    http://localhost:8080/myAttention?userId=3
+关注   http://localhost:8080/addAttention?user1Id=1&user2Id=3
+取消关注 http://localhost:8080/deleteAttention?user1Id=1&user2Id=3

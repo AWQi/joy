@@ -11,6 +11,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import com.bean.UserInfo;
 import com.common.JoyResult;
 import com.common.JsonUtils;
+import com.pojo.Attention;
 import com.pojo.User;
 import com.service.UserInfoService;
 @Controller
@@ -49,5 +50,24 @@ public JoyResult myAttention(@RequestParam("userId")int userId) {
 	List<UserInfo> userInfoList = userInfoServic.myAttention(userId);
 	return new JoyResult(userInfoServic);
 }
-
+@RequestMapping("addAttention")
+@ResponseBody
+@Override
+public JoyResult addAttention(@RequestParam("user1Id")int user1Id,@RequestParam("user2Id") int user2Id) {
+	Attention attention = new Attention();
+	attention.setUser1Id(user1Id);
+	attention.setUser2Id(user2Id);
+	userInfoServic.addAttention(attention);
+	return JoyResult.build(200," 添加成功");
+}
+@RequestMapping("deleteAttention")
+@ResponseBody
+@Override
+public JoyResult deleteAttention(@RequestParam("user1Id")int user1Id,@RequestParam("user2Id") int user2Id) {
+	Attention attention = new Attention();
+	attention.setUser1Id(user1Id);
+	attention.setUser2Id(user2Id);
+	userInfoServic.deleteAttention(attention);
+	return JoyResult.build(200," 删除成功");
+}
 }
