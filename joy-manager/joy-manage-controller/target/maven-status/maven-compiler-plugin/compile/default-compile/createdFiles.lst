@@ -1,10 +1,7 @@
-com\controller\CollectControllerImpl.class
-com\controller\CollectController.class
+com\controller\DynamicController.class
 com\controller\CommentController.class
-com\controller\CommendDynamicsController.class
-com\controller\DynamicDetialsControllerImpl.class
-com\controller\CommendDynamicsControllerImpl.class
 com\controller\UserControllerImpl.class
-com\controller\DynamicDetialsController.class
+com\controller\DynamicControllerImpl.class
 com\controller\UserController.class
 com\controller\CommentControllerImpl.class
+com\controller\UserControllerImpl$1.class

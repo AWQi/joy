@@ -1,6 +1,5 @@
 package com.common;
 
-import static org.hamcrest.CoreMatchers.nullValue;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -212,7 +211,7 @@ public class URLUtil {
 	static public void sendPostAndHead(){
 		
 	}
-	static public String getWeather(String url, String apiKey, String city) {
+static public String getWeather(String url, String apiKey, String city) {
 		String param = "key=" + apiKey + "&city=" + city;
 		String result = SendURLAndParam(url, "GET", param);
 		return result;
@@ -224,27 +223,27 @@ static public void SMS(String url,String apiKey,int tplid,String tel,String wd) 
 
 	SendURLAndParam(url, "GET",param);
 }
-	public static void main(String[] args) throws UnsupportedEncodingException {
-//		String weather = getWeather("http://api.91cha.com/weather", "8c5abe8df3574e23b73aeb51c1efb667", "北京");
-//		System.out.println(weather);
-//		SMS("http://api.91cha.com/sms","64cff0922cbb4c6896dec8dc76884866",1,"18734741443","#code#=1265");
-//		http://api.91cha.com/sms?key=64cff0922cbb4c6896dec8dc76884866&tplid=1&tel=18734741443&wd=#code#=1265
-		
-		
-		
-		String postData =JsonUtils.objectToJson(new SMS());
-		System.out.println(postData);
-		Map<String, String> head = new HashMap();
-		head.put("X-Bmob-Application-Id", "18695e4d334a25516ad2ca30c3a63c83");
-		head.put("X-Bmob-REST-API-Key", "ee6560587d3096d6bd2c19765a5dc91b");
-		head.put("Content-Type","application/json");				
-		String res = httpPost("https://api.bmob.cn/1/requestSmsCode", head,postData,null);
-		System.out.println(res);				
-	}
+
+static public String senSMSWithBmob(String tel,String template) {	
+	String postData =JsonUtils.objectToJson(new SMS(tel,template));
+	System.out.println(postData);
+	Map<String, String> head = new HashMap();
+	head.put("X-Bmob-Application-Id", "18695e4d334a25516ad2ca30c3a63c83");
+	head.put("X-Bmob-REST-API-Key", "ee6560587d3096d6bd2c19765a5dc91b");
+	head.put("Content-Type","application/json");				
+	String res = httpPost("https://api.bmob.cn/1/requestSmsCode", head,postData,null);
+	return res;
+}
 	
 static	public class SMS {
 	public	String mobilePhoneNumber="18734741443";
 	public	String template = "注册模板";
-		
+	public SMS(String mobilePhoneNumber, String template) {
+		super();
+		this.mobilePhoneNumber = mobilePhoneNumber;
+		this.template = template;
 	}
+
+	}
+	
 }

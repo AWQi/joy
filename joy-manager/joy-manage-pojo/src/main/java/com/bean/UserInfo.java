@@ -7,7 +7,9 @@ public class UserInfo  {
     private String tel;
     private String headurl;
     private Integer gender;
-    
+    public UserInfo() {
+		// TODO Auto-generated constructor stub
+	}
 	public UserInfo(int id, String name, String tel, String headurl, Integer gender) {
 		super();
 		this.id = id;

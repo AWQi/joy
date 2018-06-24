@@ -1,2 +1,8 @@
 com\common\JsonUtils.class
+com\common\HttpUtil$1.class
+com\common\URLUtil$1.class
 com\common\JoyResult.class
+com\common\URLUtil$SMS.class
+com\common\URLUtil.class
+com\common\HttpUtil$SMS.class
+com\common\HttpUtil.class

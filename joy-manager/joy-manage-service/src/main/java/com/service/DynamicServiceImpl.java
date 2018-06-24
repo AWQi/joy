@@ -24,6 +24,8 @@ import com.pojo.DynamicExample;
  */
 @Service
 public class DynamicServiceImpl implements DynamicService {
+@Autowired
+private DynamicMapper dynamicMapper;		
 @Autowired	
 private CollectionMapper collectionMapper;
 	@Override
@@ -39,8 +41,7 @@ private CollectionMapper collectionMapper;
 		criteria.andUseridEqualTo(userId);
 		collectionMapper.deleteByExample(collectionExample);
 	}
-@Autowired
-private DynamicMapper dynamicMapper;	
+
 	@Override
 	public List<Dynamic> queryDynamicCollect(int userId) {
 		CollectionExample collectionExample = new CollectionExample();
@@ -99,4 +100,4 @@ private DynamicMapper dynamicMapper;
 }
 	}
 
-}
+

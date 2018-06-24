@@ -44,6 +44,7 @@ public class CommentControllerImpl implements CommentController{
 		commentService.deleteComment(commentId);
 		return JoyResult.build(200, "删除评论成功");
 	}
+	
 	@RequestMapping("test")
 	@ResponseBody
 	public JoyResult test(@RequestBody String s
@@ -54,6 +55,6 @@ public class CommentControllerImpl implements CommentController{
 		System.out.println("key2"+key2);
 		System.out.println("head  "+head);
 		System.out.println("head2 "+head2);
-		return new JoyResult();
+		return new JoyResult("ok test");
 	}
 }
