@@ -161,7 +161,7 @@ public class URLUtil {
 			};
 			/**
 			 * 
-			 *  添加头信息
+			 *  添加 head 头信息
 			 */
 			if (head!=null) {
 				Set<String> keys = head.keySet();  
@@ -171,7 +171,7 @@ public class URLUtil {
                 }  
 			}
 			/**
-			 *   添加   尾部参数
+			 *   添加   param尾部参数
 			 *  
 			 */
 			List<NameValuePair> list = new LinkedList<>();
@@ -188,7 +188,7 @@ public class URLUtil {
 		    httpPost.setEntity(entityParam);
 			/**
 			 * 
-			 *  添加  消息体信息
+			 *  添加  body信息
 			 */
 			StringEntity se = new StringEntity(postData);
 			se.setContentEncoding("HTTP.UTF_8");

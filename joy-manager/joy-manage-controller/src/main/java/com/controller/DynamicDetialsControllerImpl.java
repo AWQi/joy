@@ -35,22 +35,6 @@ public JoyResult getDynamicAuthor( @RequestParam(value="authorId",defaultValue="
 }
 
 
-
-
-
-@Autowired
-private CommentService commentService;
-@RequestMapping("getComment")
-@ResponseBody
-@Override
-public JoyResult getComment(@RequestParam(value="dynamicId",defaultValue="0")int dynamicId) {
-	List<CommentInfo> commentInfoList = commentService.getComment(dynamicId);
-	return new JoyResult(commentInfoList);
-}
-
-
-
-
 @Autowired
 private RelevantRecomService relevantRecomService;
 @RequestMapping("RelevantRecom")

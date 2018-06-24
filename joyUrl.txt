@@ -6,7 +6,8 @@
 
 动态作者信息   http://localhost:8080/getDynamicAuthor?authorId=1
 	（包括动态信息及评论）
-评论	 http://localhost:8080/getComment?dynamicId=1
+查看评论	 http://localhost:8080/getComment?dynamicId=1
+添加评论    http://localhost:8080/addComment
 相关推荐  http://localhost:8080/RelevantRecom?kind=%E6%B8%B8%E6%88%8F
 
 

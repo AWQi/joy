@@ -21,6 +21,11 @@ public class CommentServiceImpl implements CommentService {
 private CommentMapper commentMapper;
 @Autowired
 private UserMapper userMapper;
+/** 
+ * 
+ *    查询评论
+ * 
+ */
 	@Override
 	public List<CommentInfo> getComment(int dynamicId) {
 		 /**
@@ -48,10 +53,18 @@ private UserMapper userMapper;
 		 }
 		return commentInfoList;
 	}
+	/**
+	 * 
+	 *   添加评论
+	 */
 	@Override
 	public void addComment(Comment comment) {
 		commentMapper.insert(comment);
 	}
+	/**
+	 *   删除评论
+	 * 
+	 */
 	@Override
 	public void deleteComment(int commentId) {
 		commentMapper.deleteByPrimaryKey(commentId);
