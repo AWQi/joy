@@ -24,7 +24,7 @@ private UserInfoService userInfoServic;
 	@Override
 	public JoyResult login(@RequestParam("tel")String tel,@RequestParam("password")String password) {
 	System.out.println("login服务 进入");
-		User user = userInfoServic.UserInfo(tel, password);
+		User user = userInfoServic.login(tel, password);
 	System.out.println("查询结束");
 	UserInfo userInfo = new UserInfo(user.getId(), user.getName(), user.getTel(), user.getHeadurl(), user.getGender());
 		return new JoyResult(userInfo);
@@ -70,5 +70,12 @@ public JoyResult deleteAttention(@RequestParam("user1Id")int user1Id,@RequestPar
 	attention.setUser2Id(user2Id);
 	userInfoServic.deleteAttention(attention);
 	return JoyResult.build(200," 删除成功");
+}
+@RequestMapping("getDynamicAuthor")
+@ResponseBody
+@Override
+public JoyResult getDynamicAuthor(@RequestParam("userId")int userId) {
+	UserInfo userInfo = userInfoServic.getUserInfo(userId);
+	return new JoyResult(userInfo);
 }
 }

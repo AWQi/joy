@@ -24,7 +24,7 @@ private AttentionMapper attentionMapper;
  *  查用户信息
  */
 	@Override
-	public User UserInfo(String tel, String pwd) {
+	public User login(String tel, String pwd) {
 		UserExample userExample = new UserExample();
 		Criteria criteria = userExample.createCriteria();
 		criteria.andTelEqualTo(tel);
@@ -108,6 +108,25 @@ private AttentionMapper attentionMapper;
 		criteria.andUser1IdEqualTo(attention.getUser1Id());
 		criteria.andUser2IdEqualTo(attention.getUser2Id());
 		attentionMapper.deleteByExample(attentionExample);
+	}
+	 /**
+	  * 
+	  *  查询作者信息
+	  */
+	@Override
+	public UserInfo getUserInfo(int userId) {
+		UserExample userExample = new UserExample();
+		Criteria criteria = userExample.createCriteria();
+		criteria.andIdEqualTo(userId);
+		List<User> userList = userMapper.selectByExample(userExample);	
+		System.out.println(userList.size());
+		if (userList.size()>0) {
+			User user = userList.get(0);
+			UserInfo userInfo = new UserInfo(user.getId(), user.getName(),user.getTel(),user.getHeadurl(), user.getGender());
+			return userInfo;
+		}else {
+			return null;
+		}
 	}
 
 }

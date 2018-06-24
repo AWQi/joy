@@ -1,22 +1,30 @@
-登录        http://localhost:8080/login?tel=18734741443&password=000000
-注册      http://localhost:8080/register?userInfo={%22password%22:%22000000%22,%22name%22:%22AWQI%22,%22tel%22:%2218734741443%22,%22headurl%22:%22http://140.143.16.51/image/head/c.jpg%22,%22gender%22:1}
 
 
-推荐动态  http://localhost:8080/CommendDynamics?page=1
-
-动态作者信息   http://localhost:8080/getDynamicAuthor?authorId=1
-	（包括动态信息及评论）
+评论：
 查看评论	 http://localhost:8080/getComment?dynamicId=1
 添加评论    http://localhost:8080/addComment
-相关推荐  http://localhost:8080/RelevantRecom?kind=%E6%B8%B8%E6%88%8F
+删除评论	 http://localhost:8080/deleteComment?commentId=1
 
 
-收藏：
+
+
+
+
+
    查看收藏 ：http://localhost:8080/queryDynamicCollect?userId=2
    添加收藏：http://localhost:8080/addDynamicCollect?dynamicId=1&userId=2
    删除收藏：http://localhost:8080/deleteDynamicCollect?dynamicId=1&userId=2
+   相关推荐  http://localhost:8080/RelevantRecom?kind=%E6%B8%B8%E6%88%8F
+   推荐动态  http://localhost:8080/CommendDynamics?page=1
+
+
 
 查看关注    http://localhost:8080/myFans?userId=3
-粉丝    http://localhost:8080/myAttention?userId=3
-关注   http://localhost:8080/addAttention?user1Id=1&user2Id=3
+查看粉丝    http://localhost:8080/myAttention?userId=3
+添加关注   http://localhost:8080/addAttention?user1Id=1&user2Id=3
 取消关注 http://localhost:8080/deleteAttention?user1Id=1&user2Id=3
+登录        http://localhost:8080/login?tel=18734741443&password=000000
+注册      http://localhost:8080/register?userInfo={%22password%22:%22000000%22,%22name%22:%22AWQI%22,%22tel%22:%2218734741443%22,%22headurl%22:%22http://140.143.16.51/image/head/c.jpg%22,%22gender%22:1}
+动态作者信息   http://localhost:8080/getDynamicAuthor?authorId=1
+	
+

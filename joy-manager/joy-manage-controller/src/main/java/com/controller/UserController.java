@@ -9,6 +9,7 @@ import com.pojo.Attention;
 public interface UserController {
 
 public JoyResult login(String tel, String password);
+public JoyResult getDynamicAuthor(int userId);
 public JoyResult register(String userInfo);
 public JoyResult myFans(int userId);
 public JoyResult myAttention(int userId);
