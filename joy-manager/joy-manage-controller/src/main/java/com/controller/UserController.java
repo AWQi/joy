@@ -14,7 +14,7 @@ import com.pojo.Attention;
 public interface UserController {
 
 public JoyResult login(String tel, String password);
-public JoyResult getDynamicAuthor(int userId);
+public JoyResult queryDynamicAuthor(int userId);
 public JoyResult myFans(int userId);
 public JoyResult myAttention(int userId);
 public JoyResult addAttention(int user1Id,int user2Id);

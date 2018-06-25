@@ -39,6 +39,7 @@ private UserInfoService userInfoServic;
  */
 @RequestMapping("login")
 @ResponseBody
+
 	@Override
 	public JoyResult login(@RequestParam("tel")String tel,@RequestParam("password")String password) {
 	System.out.println("login服务 进入");
@@ -49,8 +50,7 @@ private UserInfoService userInfoServic;
 	}else {
 		UserInfo userInfo = new UserInfo(user.getId(), user.getName(), user.getTel(), user.getHeadurl(), user.getGender());
 	    return new JoyResult(userInfo);
-	}
-	
+	}	
 	}
 /**
  * 
@@ -140,11 +140,11 @@ public JoyResult deleteAttention(@RequestParam("user1Id")int user1Id,@RequestPar
 	userInfoServic.deleteAttention(attention);
 	return JoyResult.build(200," 删除成功");
 }
-@RequestMapping("getDynamicAuthor")
+@RequestMapping("queryDynamicAuthor")
 @ResponseBody
 @Override
-public JoyResult getDynamicAuthor(@RequestParam("userId")int userId) {
-	UserInfo userInfo = userInfoServic.getUserInfo(userId);
+public JoyResult queryDynamicAuthor(@RequestParam("userId")int userId) {
+	UserInfo userInfo = userInfoServic.queryUserInfo(userId);
 	return new JoyResult(userInfo);
 }
 

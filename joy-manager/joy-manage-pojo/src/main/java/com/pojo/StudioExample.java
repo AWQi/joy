@@ -164,73 +164,73 @@ public class StudioExample {
             return (Criteria) this;
         }
 
-        public Criteria andImageurlIsNull() {
-            addCriterion("imageUrl is null");
+        public Criteria andImageUrlIsNull() {
+            addCriterion("image_Url is null");
             return (Criteria) this;
         }
 
-        public Criteria andImageurlIsNotNull() {
-            addCriterion("imageUrl is not null");
+        public Criteria andImageUrlIsNotNull() {
+            addCriterion("image_Url is not null");
             return (Criteria) this;
         }
 
-        public Criteria andImageurlEqualTo(String value) {
-            addCriterion("imageUrl =", value, "imageurl");
+        public Criteria andImageUrlEqualTo(String value) {
+            addCriterion("image_Url =", value, "imageUrl");
             return (Criteria) this;
         }
 
-        public Criteria andImageurlNotEqualTo(String value) {
-            addCriterion("imageUrl <>", value, "imageurl");
+        public Criteria andImageUrlNotEqualTo(String value) {
+            addCriterion("image_Url <>", value, "imageUrl");
             return (Criteria) this;
         }
 
-        public Criteria andImageurlGreaterThan(String value) {
-            addCriterion("imageUrl >", value, "imageurl");
+        public Criteria andImageUrlGreaterThan(String value) {
+            addCriterion("image_Url >", value, "imageUrl");
             return (Criteria) this;
         }
 
-        public Criteria andImageurlGreaterThanOrEqualTo(String value) {
-            addCriterion("imageUrl >=", value, "imageurl");
+        public Criteria andImageUrlGreaterThanOrEqualTo(String value) {
+            addCriterion("image_Url >=", value, "imageUrl");
             return (Criteria) this;
         }
 
-        public Criteria andImageurlLessThan(String value) {
-            addCriterion("imageUrl <", value, "imageurl");
+        public Criteria andImageUrlLessThan(String value) {
+            addCriterion("image_Url <", value, "imageUrl");
             return (Criteria) this;
         }
 
-        public Criteria andImageurlLessThanOrEqualTo(String value) {
-            addCriterion("imageUrl <=", value, "imageurl");
+        public Criteria andImageUrlLessThanOrEqualTo(String value) {
+            addCriterion("image_Url <=", value, "imageUrl");
             return (Criteria) this;
         }
 
-        public Criteria andImageurlLike(String value) {
-            addCriterion("imageUrl like", value, "imageurl");
+        public Criteria andImageUrlLike(String value) {
+            addCriterion("image_Url like", value, "imageUrl");
             return (Criteria) this;
         }
 
-        public Criteria andImageurlNotLike(String value) {
-            addCriterion("imageUrl not like", value, "imageurl");
+        public Criteria andImageUrlNotLike(String value) {
+            addCriterion("image_Url not like", value, "imageUrl");
             return (Criteria) this;
         }
 
-        public Criteria andImageurlIn(List<String> values) {
-            addCriterion("imageUrl in", values, "imageurl");
+        public Criteria andImageUrlIn(List<String> values) {
+            addCriterion("image_Url in", values, "imageUrl");
             return (Criteria) this;
         }
 
-        public Criteria andImageurlNotIn(List<String> values) {
-            addCriterion("imageUrl not in", values, "imageurl");
+        public Criteria andImageUrlNotIn(List<String> values) {
+            addCriterion("image_Url not in", values, "imageUrl");
             return (Criteria) this;
         }
 
-        public Criteria andImageurlBetween(String value1, String value2) {
-            addCriterion("imageUrl between", value1, value2, "imageurl");
+        public Criteria andImageUrlBetween(String value1, String value2) {
+            addCriterion("image_Url between", value1, value2, "imageUrl");
             return (Criteria) this;
         }
 
-        public Criteria andImageurlNotBetween(String value1, String value2) {
-            addCriterion("imageUrl not between", value1, value2, "imageurl");
+        public Criteria andImageUrlNotBetween(String value1, String value2) {
+            addCriterion("image_Url not between", value1, value2, "imageUrl");
             return (Criteria) this;
         }
 
@@ -364,73 +364,73 @@ public class StudioExample {
             return (Criteria) this;
         }
 
-        public Criteria andStudiourlIsNull() {
-            addCriterion("studioUrl is null");
+        public Criteria andStudioUrlIsNull() {
+            addCriterion("studio_Url is null");
             return (Criteria) this;
         }
 
-        public Criteria andStudiourlIsNotNull() {
-            addCriterion("studioUrl is not null");
+        public Criteria andStudioUrlIsNotNull() {
+            addCriterion("studio_Url is not null");
             return (Criteria) this;
         }
 
-        public Criteria andStudiourlEqualTo(String value) {
-            addCriterion("studioUrl =", value, "studiourl");
+        public Criteria andStudioUrlEqualTo(String value) {
+            addCriterion("studio_Url =", value, "studioUrl");
             return (Criteria) this;
         }
 
-        public Criteria andStudiourlNotEqualTo(String value) {
-            addCriterion("studioUrl <>", value, "studiourl");
+        public Criteria andStudioUrlNotEqualTo(String value) {
+            addCriterion("studio_Url <>", value, "studioUrl");
             return (Criteria) this;
         }
 
-        public Criteria andStudiourlGreaterThan(String value) {
-            addCriterion("studioUrl >", value, "studiourl");
+        public Criteria andStudioUrlGreaterThan(String value) {
+            addCriterion("studio_Url >", value, "studioUrl");
             return (Criteria) this;
         }
 
-        public Criteria andStudiourlGreaterThanOrEqualTo(String value) {
-            addCriterion("studioUrl >=", value, "studiourl");
+        public Criteria andStudioUrlGreaterThanOrEqualTo(String value) {
+            addCriterion("studio_Url >=", value, "studioUrl");
             return (Criteria) this;
         }
 
-        public Criteria andStudiourlLessThan(String value) {
-            addCriterion("studioUrl <", value, "studiourl");
+        public Criteria andStudioUrlLessThan(String value) {
+            addCriterion("studio_Url <", value, "studioUrl");
             return (Criteria) this;
         }
 
-        public Criteria andStudiourlLessThanOrEqualTo(String value) {
-            addCriterion("studioUrl <=", value, "studiourl");
+        public Criteria andStudioUrlLessThanOrEqualTo(String value) {
+            addCriterion("studio_Url <=", value, "studioUrl");
             return (Criteria) this;
         }
 
-        public Criteria andStudiourlLike(String value) {
-            addCriterion("studioUrl like", value, "studiourl");
+        public Criteria andStudioUrlLike(String value) {
+            addCriterion("studio_Url like", value, "studioUrl");
             return (Criteria) this;
         }
 
-        public Criteria andStudiourlNotLike(String value) {
-            addCriterion("studioUrl not like", value, "studiourl");
+        public Criteria andStudioUrlNotLike(String value) {
+            addCriterion("studio_Url not like", value, "studioUrl");
             return (Criteria) this;
         }
 
-        public Criteria andStudiourlIn(List<String> values) {
-            addCriterion("studioUrl in", values, "studiourl");
+        public Criteria andStudioUrlIn(List<String> values) {
+            addCriterion("studio_Url in", values, "studioUrl");
             return (Criteria) this;
         }
 
-        public Criteria andStudiourlNotIn(List<String> values) {
-            addCriterion("studioUrl not in", values, "studiourl");
+        public Criteria andStudioUrlNotIn(List<String> values) {
+            addCriterion("studio_Url not in", values, "studioUrl");
             return (Criteria) this;
         }
 
-        public Criteria andStudiourlBetween(String value1, String value2) {
-            addCriterion("studioUrl between", value1, value2, "studiourl");
+        public Criteria andStudioUrlBetween(String value1, String value2) {
+            addCriterion("studio_Url between", value1, value2, "studioUrl");
             return (Criteria) this;
         }
 
-        public Criteria andStudiourlNotBetween(String value1, String value2) {
-            addCriterion("studioUrl not between", value1, value2, "studiourl");
+        public Criteria andStudioUrlNotBetween(String value1, String value2) {
+            addCriterion("studio_Url not between", value1, value2, "studioUrl");
             return (Criteria) this;
         }
     }

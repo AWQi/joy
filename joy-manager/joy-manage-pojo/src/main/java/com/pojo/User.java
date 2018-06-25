@@ -3,7 +3,7 @@ package com.pojo;
 public class User extends UserKey {
     private String tel;
 
-    private String headurl;
+    private String headUrl;
 
     private Integer gender;
 
@@ -15,12 +15,12 @@ public class User extends UserKey {
         this.tel = tel == null ? null : tel.trim();
     }
 
-    public String getHeadurl() {
-        return headurl;
+    public String getHeadUrl() {
+        return headUrl;
     }
 
-    public void setHeadurl(String headurl) {
-        this.headurl = headurl == null ? null : headurl.trim();
+    public void setHeadUrl(String headUrl) {
+        this.headUrl = headUrl == null ? null : headUrl.trim();
     }
 
     public Integer getGender() {

@@ -234,143 +234,143 @@ public class MuscovyplayExample {
             return (Criteria) this;
         }
 
-        public Criteria andImageurlIsNull() {
-            addCriterion("imageUrl is null");
+        public Criteria andImageUrlIsNull() {
+            addCriterion("image_Url is null");
             return (Criteria) this;
         }
 
-        public Criteria andImageurlIsNotNull() {
-            addCriterion("imageUrl is not null");
+        public Criteria andImageUrlIsNotNull() {
+            addCriterion("image_Url is not null");
             return (Criteria) this;
         }
 
-        public Criteria andImageurlEqualTo(String value) {
-            addCriterion("imageUrl =", value, "imageurl");
+        public Criteria andImageUrlEqualTo(String value) {
+            addCriterion("image_Url =", value, "imageUrl");
             return (Criteria) this;
         }
 
-        public Criteria andImageurlNotEqualTo(String value) {
-            addCriterion("imageUrl <>", value, "imageurl");
+        public Criteria andImageUrlNotEqualTo(String value) {
+            addCriterion("image_Url <>", value, "imageUrl");
             return (Criteria) this;
         }
 
-        public Criteria andImageurlGreaterThan(String value) {
-            addCriterion("imageUrl >", value, "imageurl");
+        public Criteria andImageUrlGreaterThan(String value) {
+            addCriterion("image_Url >", value, "imageUrl");
             return (Criteria) this;
         }
 
-        public Criteria andImageurlGreaterThanOrEqualTo(String value) {
-            addCriterion("imageUrl >=", value, "imageurl");
+        public Criteria andImageUrlGreaterThanOrEqualTo(String value) {
+            addCriterion("image_Url >=", value, "imageUrl");
             return (Criteria) this;
         }
 
-        public Criteria andImageurlLessThan(String value) {
-            addCriterion("imageUrl <", value, "imageurl");
+        public Criteria andImageUrlLessThan(String value) {
+            addCriterion("image_Url <", value, "imageUrl");
             return (Criteria) this;
         }
 
-        public Criteria andImageurlLessThanOrEqualTo(String value) {
-            addCriterion("imageUrl <=", value, "imageurl");
+        public Criteria andImageUrlLessThanOrEqualTo(String value) {
+            addCriterion("image_Url <=", value, "imageUrl");
             return (Criteria) this;
         }
 
-        public Criteria andImageurlLike(String value) {
-            addCriterion("imageUrl like", value, "imageurl");
+        public Criteria andImageUrlLike(String value) {
+            addCriterion("image_Url like", value, "imageUrl");
             return (Criteria) this;
         }
 
-        public Criteria andImageurlNotLike(String value) {
-            addCriterion("imageUrl not like", value, "imageurl");
+        public Criteria andImageUrlNotLike(String value) {
+            addCriterion("image_Url not like", value, "imageUrl");
             return (Criteria) this;
         }
 
-        public Criteria andImageurlIn(List<String> values) {
-            addCriterion("imageUrl in", values, "imageurl");
+        public Criteria andImageUrlIn(List<String> values) {
+            addCriterion("image_Url in", values, "imageUrl");
             return (Criteria) this;
         }
 
-        public Criteria andImageurlNotIn(List<String> values) {
-            addCriterion("imageUrl not in", values, "imageurl");
+        public Criteria andImageUrlNotIn(List<String> values) {
+            addCriterion("image_Url not in", values, "imageUrl");
             return (Criteria) this;
         }
 
-        public Criteria andImageurlBetween(String value1, String value2) {
-            addCriterion("imageUrl between", value1, value2, "imageurl");
+        public Criteria andImageUrlBetween(String value1, String value2) {
+            addCriterion("image_Url between", value1, value2, "imageUrl");
             return (Criteria) this;
         }
 
-        public Criteria andImageurlNotBetween(String value1, String value2) {
-            addCriterion("imageUrl not between", value1, value2, "imageurl");
+        public Criteria andImageUrlNotBetween(String value1, String value2) {
+            addCriterion("image_Url not between", value1, value2, "imageUrl");
             return (Criteria) this;
         }
 
-        public Criteria andVideoIsNull() {
-            addCriterion("video is null");
+        public Criteria andVideoUrlIsNull() {
+            addCriterion("video_Url is null");
             return (Criteria) this;
         }
 
-        public Criteria andVideoIsNotNull() {
-            addCriterion("video is not null");
+        public Criteria andVideoUrlIsNotNull() {
+            addCriterion("video_Url is not null");
             return (Criteria) this;
         }
 
-        public Criteria andVideoEqualTo(String value) {
-            addCriterion("video =", value, "video");
+        public Criteria andVideoUrlEqualTo(String value) {
+            addCriterion("video_Url =", value, "videoUrl");
             return (Criteria) this;
         }
 
-        public Criteria andVideoNotEqualTo(String value) {
-            addCriterion("video <>", value, "video");
+        public Criteria andVideoUrlNotEqualTo(String value) {
+            addCriterion("video_Url <>", value, "videoUrl");
             return (Criteria) this;
         }
 
-        public Criteria andVideoGreaterThan(String value) {
-            addCriterion("video >", value, "video");
+        public Criteria andVideoUrlGreaterThan(String value) {
+            addCriterion("video_Url >", value, "videoUrl");
             return (Criteria) this;
         }
 
-        public Criteria andVideoGreaterThanOrEqualTo(String value) {
-            addCriterion("video >=", value, "video");
+        public Criteria andVideoUrlGreaterThanOrEqualTo(String value) {
+            addCriterion("video_Url >=", value, "videoUrl");
             return (Criteria) this;
         }
 
-        public Criteria andVideoLessThan(String value) {
-            addCriterion("video <", value, "video");
+        public Criteria andVideoUrlLessThan(String value) {
+            addCriterion("video_Url <", value, "videoUrl");
             return (Criteria) this;
         }
 
-        public Criteria andVideoLessThanOrEqualTo(String value) {
-            addCriterion("video <=", value, "video");
+        public Criteria andVideoUrlLessThanOrEqualTo(String value) {
+            addCriterion("video_Url <=", value, "videoUrl");
             return (Criteria) this;
         }
 
-        public Criteria andVideoLike(String value) {
-            addCriterion("video like", value, "video");
+        public Criteria andVideoUrlLike(String value) {
+            addCriterion("video_Url like", value, "videoUrl");
             return (Criteria) this;
         }
 
-        public Criteria andVideoNotLike(String value) {
-            addCriterion("video not like", value, "video");
+        public Criteria andVideoUrlNotLike(String value) {
+            addCriterion("video_Url not like", value, "videoUrl");
             return (Criteria) this;
         }
 
-        public Criteria andVideoIn(List<String> values) {
-            addCriterion("video in", values, "video");
+        public Criteria andVideoUrlIn(List<String> values) {
+            addCriterion("video_Url in", values, "videoUrl");
             return (Criteria) this;
         }
 
-        public Criteria andVideoNotIn(List<String> values) {
-            addCriterion("video not in", values, "video");
+        public Criteria andVideoUrlNotIn(List<String> values) {
+            addCriterion("video_Url not in", values, "videoUrl");
             return (Criteria) this;
         }
 
-        public Criteria andVideoBetween(String value1, String value2) {
-            addCriterion("video between", value1, value2, "video");
+        public Criteria andVideoUrlBetween(String value1, String value2) {
+            addCriterion("video_Url between", value1, value2, "videoUrl");
             return (Criteria) this;
         }
 
-        public Criteria andVideoNotBetween(String value1, String value2) {
-            addCriterion("video not between", value1, value2, "video");
+        public Criteria andVideoUrlNotBetween(String value1, String value2) {
+            addCriterion("video_Url not between", value1, value2, "videoUrl");
             return (Criteria) this;
         }
     }

@@ -3,10 +3,10 @@
 <mapper namespace="com.mapper.StudioMapper" >
   <resultMap id="BaseResultMap" type="com.pojo.Studio" >
     <id column="id" property="id" jdbcType="INTEGER" />
-    <result column="imageUrl" property="imageurl" jdbcType="VARCHAR" />
+    <result column="image_Url" property="imageUrl" jdbcType="VARCHAR" />
     <result column="title" property="title" jdbcType="VARCHAR" />
     <result column="premiere" property="premiere" jdbcType="INTEGER" />
-    <result column="studioUrl" property="studiourl" jdbcType="VARCHAR" />
+    <result column="studio_Url" property="studioUrl" jdbcType="VARCHAR" />
   </resultMap>
   <sql id="Example_Where_Clause" >
     <where >
@@ -67,7 +67,7 @@
     </where>
   </sql>
   <sql id="Base_Column_List" >
-    id, imageUrl, title, premiere, studioUrl
+    id, image_Url, title, premiere, studio_Url
   </sql>
   <select id="selectByExample" resultMap="BaseResultMap" parameterType="com.pojo.StudioExample" >
     select
@@ -100,10 +100,10 @@
     </if>
   </delete>
   <insert id="insert" parameterType="com.pojo.Studio" >
-    insert into studio (id, imageUrl, title, 
-      premiere, studioUrl)
-    values (#{id,jdbcType=INTEGER}, #{imageurl,jdbcType=VARCHAR}, #{title,jdbcType=VARCHAR}, 
-      #{premiere,jdbcType=INTEGER}, #{studiourl,jdbcType=VARCHAR})
+    insert into studio (id, image_Url, title, 
+      premiere, studio_Url)
+    values (#{id,jdbcType=INTEGER}, #{imageUrl,jdbcType=VARCHAR}, #{title,jdbcType=VARCHAR}, 
+      #{premiere,jdbcType=INTEGER}, #{studioUrl,jdbcType=VARCHAR})
   </insert>
   <insert id="insertSelective" parameterType="com.pojo.Studio" >
     insert into studio
@@ -111,8 +111,8 @@
       <if test="id != null" >
         id,
       </if>
-      <if test="imageurl != null" >
-        imageUrl,
+      <if test="imageUrl != null" >
+        image_Url,
       </if>
       <if test="title != null" >
         title,
@@ -120,16 +120,16 @@
       <if test="premiere != null" >
         premiere,
       </if>
-      <if test="studiourl != null" >
-        studioUrl,
+      <if test="studioUrl != null" >
+        studio_Url,
       </if>
     </trim>
     <trim prefix="values (" suffix=")" suffixOverrides="," >
       <if test="id != null" >
         #{id,jdbcType=INTEGER},
       </if>
-      <if test="imageurl != null" >
-        #{imageurl,jdbcType=VARCHAR},
+      <if test="imageUrl != null" >
+        #{imageUrl,jdbcType=VARCHAR},
       </if>
       <if test="title != null" >
         #{title,jdbcType=VARCHAR},
@@ -137,8 +137,8 @@
       <if test="premiere != null" >
         #{premiere,jdbcType=INTEGER},
       </if>
-      <if test="studiourl != null" >
-        #{studiourl,jdbcType=VARCHAR},
+      <if test="studioUrl != null" >
+        #{studioUrl,jdbcType=VARCHAR},
       </if>
     </trim>
   </insert>
@@ -154,8 +154,8 @@
       <if test="record.id != null" >
         id = #{record.id,jdbcType=INTEGER},
       </if>
-      <if test="record.imageurl != null" >
-        imageUrl = #{record.imageurl,jdbcType=VARCHAR},
+      <if test="record.imageUrl != null" >
+        image_Url = #{record.imageUrl,jdbcType=VARCHAR},
       </if>
       <if test="record.title != null" >
         title = #{record.title,jdbcType=VARCHAR},
@@ -163,8 +163,8 @@
       <if test="record.premiere != null" >
         premiere = #{record.premiere,jdbcType=INTEGER},
       </if>
-      <if test="record.studiourl != null" >
-        studioUrl = #{record.studiourl,jdbcType=VARCHAR},
+      <if test="record.studioUrl != null" >
+        studio_Url = #{record.studioUrl,jdbcType=VARCHAR},
       </if>
     </set>
     <if test="_parameter != null" >
@@ -174,10 +174,10 @@
   <update id="updateByExample" parameterType="map" >
     update studio
     set id = #{record.id,jdbcType=INTEGER},
-      imageUrl = #{record.imageurl,jdbcType=VARCHAR},
+      image_Url = #{record.imageUrl,jdbcType=VARCHAR},
       title = #{record.title,jdbcType=VARCHAR},
       premiere = #{record.premiere,jdbcType=INTEGER},
-      studioUrl = #{record.studiourl,jdbcType=VARCHAR}
+      studio_Url = #{record.studioUrl,jdbcType=VARCHAR}
     <if test="_parameter != null" >
       <include refid="Update_By_Example_Where_Clause" />
     </if>
@@ -185,8 +185,8 @@
   <update id="updateByPrimaryKeySelective" parameterType="com.pojo.Studio" >
     update studio
     <set >
-      <if test="imageurl != null" >
-        imageUrl = #{imageurl,jdbcType=VARCHAR},
+      <if test="imageUrl != null" >
+        image_Url = #{imageUrl,jdbcType=VARCHAR},
       </if>
       <if test="title != null" >
         title = #{title,jdbcType=VARCHAR},
@@ -194,18 +194,18 @@
       <if test="premiere != null" >
         premiere = #{premiere,jdbcType=INTEGER},
       </if>
-      <if test="studiourl != null" >
-        studioUrl = #{studiourl,jdbcType=VARCHAR},
+      <if test="studioUrl != null" >
+        studio_Url = #{studioUrl,jdbcType=VARCHAR},
       </if>
     </set>
     where id = #{id,jdbcType=INTEGER}
   </update>
   <update id="updateByPrimaryKey" parameterType="com.pojo.Studio" >
     update studio
-    set imageUrl = #{imageurl,jdbcType=VARCHAR},
+    set image_Url = #{imageUrl,jdbcType=VARCHAR},
       title = #{title,jdbcType=VARCHAR},
       premiere = #{premiere,jdbcType=INTEGER},
-      studioUrl = #{studiourl,jdbcType=VARCHAR}
+      studio_Url = #{studioUrl,jdbcType=VARCHAR}
     where id = #{id,jdbcType=INTEGER}
   </update>
 </mapper>

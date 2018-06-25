@@ -6,7 +6,7 @@ import com.bean.CommentInfo;
 import com.pojo.Comment;
 
 public interface CommentService {
-public List<CommentInfo> getComment(int dynamicId);
+public List<CommentInfo> queryComment(int dynamicId);
 public void addComment(Comment comment);
 public void deleteComment(int commentId);
 }

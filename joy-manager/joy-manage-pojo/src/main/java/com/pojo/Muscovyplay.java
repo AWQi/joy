@@ -5,9 +5,9 @@ public class Muscovyplay {
 
     private String name;
 
-    private String imageurl;
+    private String imageUrl;
 
-    private String video;
+    private String videoUrl;
 
     public Integer getId() {
         return id;
@@ -25,19 +25,19 @@ public class Muscovyplay {
         this.name = name == null ? null : name.trim();
     }
 
-    public String getImageurl() {
-        return imageurl;
+    public String getImageUrl() {
+        return imageUrl;
     }
 
-    public void setImageurl(String imageurl) {
-        this.imageurl = imageurl == null ? null : imageurl.trim();
+    public void setImageUrl(String imageUrl) {
+        this.imageUrl = imageUrl == null ? null : imageUrl.trim();
     }
 
-    public String getVideo() {
-        return video;
+    public String getVideoUrl() {
+        return videoUrl;
     }
 
-    public void setVideo(String video) {
-        this.video = video == null ? null : video.trim();
+    public void setVideoUrl(String videoUrl) {
+        this.videoUrl = videoUrl == null ? null : videoUrl.trim();
     }
 }

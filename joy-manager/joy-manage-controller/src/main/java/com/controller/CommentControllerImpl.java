@@ -21,11 +21,11 @@ import com.service.CommentService;
 public class CommentControllerImpl implements CommentController{
 	@Autowired
 	private CommentService commentService;
-	@RequestMapping("getComment")
+	@RequestMapping("queryComment")
 	@ResponseBody
 	@Override
-	public JoyResult getComment(@RequestParam(value="dynamicId",defaultValue="0")int dynamicId) {
-		List<CommentInfo> commentInfoList = commentService.getComment(dynamicId);
+	public JoyResult queryComment(@RequestParam(value="dynamicId",defaultValue="0")int dynamicId) {
+		List<CommentInfo> commentInfoList = commentService.queryComment(dynamicId);
 		return new JoyResult(commentInfoList);
 	}
 

@@ -1,7 +1,8 @@
 
+10.0.2.2
 
 评论：
-查看评论	 http://localhost:8080/getComment?dynamicId=1
+查看评论	 http://localhost:8080/queryComment?dynamicId=1
 添加评论    http://localhost:8080/addComment
 删除评论	 http://localhost:8080/deleteComment?commentId=1
 
@@ -14,8 +15,10 @@
    查看收藏 ：http://localhost:8080/queryDynamicCollect?userId=2
    添加收藏：http://localhost:8080/addDynamicCollect?dynamicId=1&userId=2
    删除收藏：http://localhost:8080/deleteDynamicCollect?dynamicId=1&userId=2
-   相关推荐  http://localhost:8080/RelevantRecom?kind=%E6%B8%B8%E6%88%8F
+   相关推荐  http://localhost:8080/relevantRecom?kind=%E6%B8%B8%E6%88%8F
    推荐动态  http://localhost:8080/CommendDynamics?page=1
+查看所关注的人的动态
+  http://localhost:8080/queryAttentDynamic?userId=1
 
 
 

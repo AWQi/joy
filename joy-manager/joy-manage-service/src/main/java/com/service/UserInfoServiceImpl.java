@@ -139,7 +139,7 @@ public class UserInfoServiceImpl implements UserInfoService {
 	 * 查询作者信息
 	 */
 	@Override
-	public UserInfo getUserInfo(int userId) {
+	public UserInfo queryUserInfo(int userId) {
 		UserExample userExample = new UserExample();
 		Criteria criteria = userExample.createCriteria();
 		criteria.andIdEqualTo(userId);

@@ -5,25 +5,25 @@ import java.util.Date;
 public class Dynamic {
     private Integer id;
 
-    private Integer authorid;
+    private Integer authorId;
 
     private String title;
 
-    private String imageurl;
+    private String imageUrl;
 
     private String introduction;
 
-    private String videourl;
+    private String videoUrl;
 
-    private Integer praisesnum;
+    private Integer praisesNum;
 
     private String kind;
 
     private Date date;
 
-    private Integer viewnum;
+    private Integer viewNum;
 
-    private Integer collnum;
+    private Integer collectNum;
 
     public Integer getId() {
         return id;
@@ -33,12 +33,12 @@ public class Dynamic {
         this.id = id;
     }
 
-    public Integer getAuthorid() {
-        return authorid;
+    public Integer getAuthorId() {
+        return authorId;
     }
 
-    public void setAuthorid(Integer authorid) {
-        this.authorid = authorid;
+    public void setAuthorId(Integer authorId) {
+        this.authorId = authorId;
     }
 
     public String getTitle() {
@@ -49,12 +49,12 @@ public class Dynamic {
         this.title = title == null ? null : title.trim();
     }
 
-    public String getImageurl() {
-        return imageurl;
+    public String getImageUrl() {
+        return imageUrl;
     }
 
-    public void setImageurl(String imageurl) {
-        this.imageurl = imageurl == null ? null : imageurl.trim();
+    public void setImageUrl(String imageUrl) {
+        this.imageUrl = imageUrl == null ? null : imageUrl.trim();
     }
 
     public String getIntroduction() {
@@ -65,20 +65,20 @@ public class Dynamic {
         this.introduction = introduction == null ? null : introduction.trim();
     }
 
-    public String getVideourl() {
-        return videourl;
+    public String getVideoUrl() {
+        return videoUrl;
     }
 
-    public void setVideourl(String videourl) {
-        this.videourl = videourl == null ? null : videourl.trim();
+    public void setVideoUrl(String videoUrl) {
+        this.videoUrl = videoUrl == null ? null : videoUrl.trim();
     }
 
-    public Integer getPraisesnum() {
-        return praisesnum;
+    public Integer getPraisesNum() {
+        return praisesNum;
     }
 
-    public void setPraisesnum(Integer praisesnum) {
-        this.praisesnum = praisesnum;
+    public void setPraisesNum(Integer praisesNum) {
+        this.praisesNum = praisesNum;
     }
 
     public String getKind() {
@@ -97,19 +97,19 @@ public class Dynamic {
         this.date = date;
     }
 
-    public Integer getViewnum() {
-        return viewnum;
+    public Integer getViewNum() {
+        return viewNum;
     }
 
-    public void setViewnum(Integer viewnum) {
-        this.viewnum = viewnum;
+    public void setViewNum(Integer viewNum) {
+        this.viewNum = viewNum;
     }
 
-    public Integer getCollnum() {
-        return collnum;
+    public Integer getCollectNum() {
+        return collectNum;
     }
 
-    public void setCollnum(Integer collnum) {
-        this.collnum = collnum;
+    public void setCollectNum(Integer collectNum) {
+        this.collectNum = collectNum;
     }
 }

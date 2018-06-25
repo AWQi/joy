@@ -3,13 +3,13 @@ package com.pojo;
 public class Studio {
     private Integer id;
 
-    private String imageurl;
+    private String imageUrl;
 
     private String title;
 
     private Integer premiere;
 
-    private String studiourl;
+    private String studioUrl;
 
     public Integer getId() {
         return id;
@@ -19,12 +19,12 @@ public class Studio {
         this.id = id;
     }
 
-    public String getImageurl() {
-        return imageurl;
+    public String getImageUrl() {
+        return imageUrl;
     }
 
-    public void setImageurl(String imageurl) {
-        this.imageurl = imageurl == null ? null : imageurl.trim();
+    public void setImageUrl(String imageUrl) {
+        this.imageUrl = imageUrl == null ? null : imageUrl.trim();
     }
 
     public String getTitle() {
@@ -43,11 +43,11 @@ public class Studio {
         this.premiere = premiere;
     }
 
-    public String getStudiourl() {
-        return studiourl;
+    public String getStudioUrl() {
+        return studioUrl;
     }
 
-    public void setStudiourl(String studiourl) {
-        this.studiourl = studiourl == null ? null : studiourl.trim();
+    public void setStudioUrl(String studioUrl) {
+        this.studioUrl = studioUrl == null ? null : studioUrl.trim();
     }
 }

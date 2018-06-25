@@ -27,7 +27,7 @@ private UserMapper userMapper;
  * 
  */
 	@Override
-	public List<CommentInfo> getComment(int dynamicId) {
+	public List<CommentInfo> queryComment(int dynamicId) {
 		 /**
 		  *  查询 评论
 		  * 

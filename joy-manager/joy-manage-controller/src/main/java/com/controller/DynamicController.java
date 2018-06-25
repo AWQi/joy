@@ -9,6 +9,7 @@ public interface DynamicController {
 	public JoyResult addDynamicCollect(int dynamicId,int userId);
 	public JoyResult deleteDynamicCollect(int dynamicId,int userId);
 	public JoyResult queryDynamicCollect(int userId);
-	public  JoyResult RelevantRecom(String kind);
-	public JoyResult CommendDynamics(int page); //推荐
+	public JoyResult relevantRecom(String kind);
+	public JoyResult commendDynamics(int page); //推荐
+	public JoyResult queryAttentDynamic(int userId); // 查询所关注的用户动态
 }

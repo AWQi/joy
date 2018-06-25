@@ -374,73 +374,73 @@ public class UserExample {
             return (Criteria) this;
         }
 
-        public Criteria andHeadurlIsNull() {
-            addCriterion("headUrl is null");
+        public Criteria andHeadUrlIsNull() {
+            addCriterion("head_Url is null");
             return (Criteria) this;
         }
 
-        public Criteria andHeadurlIsNotNull() {
-            addCriterion("headUrl is not null");
+        public Criteria andHeadUrlIsNotNull() {
+            addCriterion("head_Url is not null");
             return (Criteria) this;
         }
 
-        public Criteria andHeadurlEqualTo(String value) {
-            addCriterion("headUrl =", value, "headurl");
+        public Criteria andHeadUrlEqualTo(String value) {
+            addCriterion("head_Url =", value, "headUrl");
             return (Criteria) this;
         }
 
-        public Criteria andHeadurlNotEqualTo(String value) {
-            addCriterion("headUrl <>", value, "headurl");
+        public Criteria andHeadUrlNotEqualTo(String value) {
+            addCriterion("head_Url <>", value, "headUrl");
             return (Criteria) this;
         }
 
-        public Criteria andHeadurlGreaterThan(String value) {
-            addCriterion("headUrl >", value, "headurl");
+        public Criteria andHeadUrlGreaterThan(String value) {
+            addCriterion("head_Url >", value, "headUrl");
             return (Criteria) this;
         }
 
-        public Criteria andHeadurlGreaterThanOrEqualTo(String value) {
-            addCriterion("headUrl >=", value, "headurl");
+        public Criteria andHeadUrlGreaterThanOrEqualTo(String value) {
+            addCriterion("head_Url >=", value, "headUrl");
             return (Criteria) this;
         }
 
-        public Criteria andHeadurlLessThan(String value) {
-            addCriterion("headUrl <", value, "headurl");
+        public Criteria andHeadUrlLessThan(String value) {
+            addCriterion("head_Url <", value, "headUrl");
             return (Criteria) this;
         }
 
-        public Criteria andHeadurlLessThanOrEqualTo(String value) {
-            addCriterion("headUrl <=", value, "headurl");
+        public Criteria andHeadUrlLessThanOrEqualTo(String value) {
+            addCriterion("head_Url <=", value, "headUrl");
             return (Criteria) this;
         }
 
-        public Criteria andHeadurlLike(String value) {
-            addCriterion("headUrl like", value, "headurl");
+        public Criteria andHeadUrlLike(String value) {
+            addCriterion("head_Url like", value, "headUrl");
             return (Criteria) this;
         }
 
-        public Criteria andHeadurlNotLike(String value) {
-            addCriterion("headUrl not like", value, "headurl");
+        public Criteria andHeadUrlNotLike(String value) {
+            addCriterion("head_Url not like", value, "headUrl");
             return (Criteria) this;
         }
 
-        public Criteria andHeadurlIn(List<String> values) {
-            addCriterion("headUrl in", values, "headurl");
+        public Criteria andHeadUrlIn(List<String> values) {
+            addCriterion("head_Url in", values, "headUrl");
             return (Criteria) this;
         }
 
-        public Criteria andHeadurlNotIn(List<String> values) {
-            addCriterion("headUrl not in", values, "headurl");
+        public Criteria andHeadUrlNotIn(List<String> values) {
+            addCriterion("head_Url not in", values, "headUrl");
             return (Criteria) this;
         }
 
-        public Criteria andHeadurlBetween(String value1, String value2) {
-            addCriterion("headUrl between", value1, value2, "headurl");
+        public Criteria andHeadUrlBetween(String value1, String value2) {
+            addCriterion("head_Url between", value1, value2, "headUrl");
             return (Criteria) this;
         }
 
-        public Criteria andHeadurlNotBetween(String value1, String value2) {
-            addCriterion("headUrl not between", value1, value2, "headurl");
+        public Criteria andHeadUrlNotBetween(String value1, String value2) {
+            addCriterion("head_Url not between", value1, value2, "headUrl");
             return (Criteria) this;
         }
 

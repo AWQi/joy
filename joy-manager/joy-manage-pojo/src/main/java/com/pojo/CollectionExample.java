@@ -164,123 +164,123 @@ public class CollectionExample {
             return (Criteria) this;
         }
 
-        public Criteria andDyidIsNull() {
-            addCriterion("dyId is null");
+        public Criteria andDynamicIdIsNull() {
+            addCriterion("dynamic_Id is null");
             return (Criteria) this;
         }
 
-        public Criteria andDyidIsNotNull() {
-            addCriterion("dyId is not null");
+        public Criteria andDynamicIdIsNotNull() {
+            addCriterion("dynamic_Id is not null");
             return (Criteria) this;
         }
 
-        public Criteria andDyidEqualTo(Integer value) {
-            addCriterion("dyId =", value, "dyid");
+        public Criteria andDynamicIdEqualTo(Integer value) {
+            addCriterion("dynamic_Id =", value, "dynamicId");
             return (Criteria) this;
         }
 
-        public Criteria andDyidNotEqualTo(Integer value) {
-            addCriterion("dyId <>", value, "dyid");
+        public Criteria andDynamicIdNotEqualTo(Integer value) {
+            addCriterion("dynamic_Id <>", value, "dynamicId");
             return (Criteria) this;
         }
 
-        public Criteria andDyidGreaterThan(Integer value) {
-            addCriterion("dyId >", value, "dyid");
+        public Criteria andDynamicIdGreaterThan(Integer value) {
+            addCriterion("dynamic_Id >", value, "dynamicId");
             return (Criteria) this;
         }
 
-        public Criteria andDyidGreaterThanOrEqualTo(Integer value) {
-            addCriterion("dyId >=", value, "dyid");
+        public Criteria andDynamicIdGreaterThanOrEqualTo(Integer value) {
+            addCriterion("dynamic_Id >=", value, "dynamicId");
             return (Criteria) this;
         }
 
-        public Criteria andDyidLessThan(Integer value) {
-            addCriterion("dyId <", value, "dyid");
+        public Criteria andDynamicIdLessThan(Integer value) {
+            addCriterion("dynamic_Id <", value, "dynamicId");
             return (Criteria) this;
         }
 
-        public Criteria andDyidLessThanOrEqualTo(Integer value) {
-            addCriterion("dyId <=", value, "dyid");
+        public Criteria andDynamicIdLessThanOrEqualTo(Integer value) {
+            addCriterion("dynamic_Id <=", value, "dynamicId");
             return (Criteria) this;
         }
 
-        public Criteria andDyidIn(List<Integer> values) {
-            addCriterion("dyId in", values, "dyid");
+        public Criteria andDynamicIdIn(List<Integer> values) {
+            addCriterion("dynamic_Id in", values, "dynamicId");
             return (Criteria) this;
         }
 
-        public Criteria andDyidNotIn(List<Integer> values) {
-            addCriterion("dyId not in", values, "dyid");
+        public Criteria andDynamicIdNotIn(List<Integer> values) {
+            addCriterion("dynamic_Id not in", values, "dynamicId");
             return (Criteria) this;
         }
 
-        public Criteria andDyidBetween(Integer value1, Integer value2) {
-            addCriterion("dyId between", value1, value2, "dyid");
+        public Criteria andDynamicIdBetween(Integer value1, Integer value2) {
+            addCriterion("dynamic_Id between", value1, value2, "dynamicId");
             return (Criteria) this;
         }
 
-        public Criteria andDyidNotBetween(Integer value1, Integer value2) {
-            addCriterion("dyId not between", value1, value2, "dyid");
+        public Criteria andDynamicIdNotBetween(Integer value1, Integer value2) {
+            addCriterion("dynamic_Id not between", value1, value2, "dynamicId");
             return (Criteria) this;
         }
 
-        public Criteria andUseridIsNull() {
-            addCriterion("userId is null");
+        public Criteria andUserIdIsNull() {
+            addCriterion("user_Id is null");
             return (Criteria) this;
         }
 
-        public Criteria andUseridIsNotNull() {
-            addCriterion("userId is not null");
+        public Criteria andUserIdIsNotNull() {
+            addCriterion("user_Id is not null");
             return (Criteria) this;
         }
 
-        public Criteria andUseridEqualTo(Integer value) {
-            addCriterion("userId =", value, "userid");
+        public Criteria andUserIdEqualTo(Integer value) {
+            addCriterion("user_Id =", value, "userId");
             return (Criteria) this;
         }
 
-        public Criteria andUseridNotEqualTo(Integer value) {
-            addCriterion("userId <>", value, "userid");
+        public Criteria andUserIdNotEqualTo(Integer value) {
+            addCriterion("user_Id <>", value, "userId");
             return (Criteria) this;
         }
 
-        public Criteria andUseridGreaterThan(Integer value) {
-            addCriterion("userId >", value, "userid");
+        public Criteria andUserIdGreaterThan(Integer value) {
+            addCriterion("user_Id >", value, "userId");
             return (Criteria) this;
         }
 
-        public Criteria andUseridGreaterThanOrEqualTo(Integer value) {
-            addCriterion("userId >=", value, "userid");
+        public Criteria andUserIdGreaterThanOrEqualTo(Integer value) {
+            addCriterion("user_Id >=", value, "userId");
             return (Criteria) this;
         }
 
-        public Criteria andUseridLessThan(Integer value) {
-            addCriterion("userId <", value, "userid");
+        public Criteria andUserIdLessThan(Integer value) {
+            addCriterion("user_Id <", value, "userId");
             return (Criteria) this;
         }
 
-        public Criteria andUseridLessThanOrEqualTo(Integer value) {
-            addCriterion("userId <=", value, "userid");
+        public Criteria andUserIdLessThanOrEqualTo(Integer value) {
+            addCriterion("user_Id <=", value, "userId");
             return (Criteria) this;
         }
 
-        public Criteria andUseridIn(List<Integer> values) {
-            addCriterion("userId in", values, "userid");
+        public Criteria andUserIdIn(List<Integer> values) {
+            addCriterion("user_Id in", values, "userId");
             return (Criteria) this;
         }
 
-        public Criteria andUseridNotIn(List<Integer> values) {
-            addCriterion("userId not in", values, "userid");
+        public Criteria andUserIdNotIn(List<Integer> values) {
+            addCriterion("user_Id not in", values, "userId");
             return (Criteria) this;
         }
 
-        public Criteria andUseridBetween(Integer value1, Integer value2) {
-            addCriterion("userId between", value1, value2, "userid");
+        public Criteria andUserIdBetween(Integer value1, Integer value2) {
+            addCriterion("user_Id between", value1, value2, "userId");
             return (Criteria) this;
         }
 
-        public Criteria andUseridNotBetween(Integer value1, Integer value2) {
-            addCriterion("userId not between", value1, value2, "userid");
+        public Criteria andUserIdNotBetween(Integer value1, Integer value2) {
+            addCriterion("user_Id not between", value1, value2, "userId");
             return (Criteria) this;
         }
     }

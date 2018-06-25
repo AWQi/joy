@@ -3,21 +3,11 @@ package com.pojo;
 public class Collection {
     private Integer id;
 
-    private Integer dyid;
+    private Integer dynamicId;
 
-    private Integer userid;
+    private Integer userId;
 
-    public Collection(Integer dyid, Integer userid) {
-		super();
-		this.dyid = dyid;
-		this.userid = userid;
-	}
-
-	public Collection() {
-		super();
-	}
-
-	public Integer getId() {
+    public Integer getId() {
         return id;
     }
 
@@ -25,19 +15,19 @@ public class Collection {
         this.id = id;
     }
 
-    public Integer getDyid() {
-        return dyid;
+    public Integer getDynamicId() {
+        return dynamicId;
     }
 
-    public void setDyid(Integer dyid) {
-        this.dyid = dyid;
+    public void setDynamicId(Integer dynamicId) {
+        this.dynamicId = dynamicId;
     }
 
-    public Integer getUserid() {
-        return userid;
+    public Integer getUserId() {
+        return userId;
     }
 
-    public void setUserid(Integer userid) {
-        this.userid = userid;
+    public void setUserId(Integer userId) {
+        this.userId = userId;
     }
 }

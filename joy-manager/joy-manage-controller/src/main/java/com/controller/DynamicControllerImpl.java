@@ -52,10 +52,10 @@ private DynamicService dynamicService;
  * 
  *   相关推荐
  */
-@RequestMapping("RelevantRecom")
+@RequestMapping("relevantRecom")
 @ResponseBody
 @Override
-public JoyResult RelevantRecom(@RequestParam("kind")String kind) {
+public JoyResult relevantRecom(@RequestParam("kind")String kind) {
 	System.out.println("kind   " + kind);
 	List<Dynamic> dynamicList = dynamicService.RelevantRecom(kind);
 	return new JoyResult(dynamicList);
@@ -64,12 +64,23 @@ public JoyResult RelevantRecom(@RequestParam("kind")String kind) {
  * 
  *    排行推荐
  */
-@RequestMapping("CommendDynamics")
+@RequestMapping("commendDynamics")
 @ResponseBody
 	@Override
-	public JoyResult CommendDynamics(@RequestParam("page")int page) {
+	public JoyResult commendDynamics(@RequestParam("page")int page) {
 		List<Dynamic> dynamicList = dynamicService.CommendDynamics(page, 4);
 		return new JoyResult(dynamicList);
 	}
+/**
+ *    查询所关注的人的动态
+ */
+@RequestMapping("queryAttentDynamic")
+@ResponseBody
+@Override
+public JoyResult queryAttentDynamic(@RequestParam("userId")int userId) {
+List<Dynamic> dynamicList = dynamicService.queryAttentDynamic(userId);
+	
+	return new JoyResult(dynamicList);
+}
 	
 }
