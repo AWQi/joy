@@ -12,4 +12,5 @@ public interface DynamicController {
 	public JoyResult relevantRecom(String kind);
 	public JoyResult commendDynamics(int page); //推荐
 	public JoyResult queryAttentDynamic(int userId); // 查询所关注的用户动态
+	public JoyResult queryMyDynamic(int userId);
 }

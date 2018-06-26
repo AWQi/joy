@@ -163,4 +163,23 @@ public class DynamicServiceImpl implements DynamicService {
 		
 		return dyInfoList;
 	}
+
+	@Override
+	public List<DynamicInfo> queryMyDynamic(int userId) {
+		User user = userMapper.selectByPrimaryKey(userId);
+		DynamicExample dynamicExample = new DynamicExample();
+		com.pojo.DynamicExample.Criteria dynamicCriteria = dynamicExample.createCriteria();
+		dynamicCriteria.andAuthorIdEqualTo(userId);
+		List<Dynamic> dynamicList = dynamicMapper.selectByExample(dynamicExample);
+		List<DynamicInfo>dynamicInfoList = new ArrayList();
+		for (Dynamic dynamic : dynamicList) {
+			DynamicInfo dynamicInfo = new DynamicInfo(dynamic.getId(), dynamic.getTitle()
+					, dynamic.getIntroduction(), dynamic.getImageUrl(), dynamic.getKind()
+					, dynamic.getVideoUrl(), dynamic.getPraisesNum(), dynamic.getViewNum()
+					, dynamic.getCollectNum(),dynamic.getDate(),dynamic.getAuthorId()
+					, user.getName(), user.getHeadUrl());
+			dynamicInfoList.add(dynamicInfo);
+		}
+		return dynamicInfoList;
+	}
 }

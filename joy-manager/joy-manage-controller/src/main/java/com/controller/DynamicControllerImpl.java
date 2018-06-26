@@ -83,5 +83,15 @@ List<DynamicInfo> dynamicList = dynamicService.queryAttentDynamic(userId);
 	
 	return new JoyResult(dynamicList);
 }
+/**
+ *   查询我的动态
+ */
+@RequestMapping("queryMyDynamic")
+@ResponseBody
+@Override
+public JoyResult queryMyDynamic(@RequestParam("userId")int userId) {
+	List<DynamicInfo> dynamicInfoList = dynamicService.queryMyDynamic(userId);
+	return new JoyResult(dynamicInfoList);
+}
 	
 }

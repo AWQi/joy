@@ -5,7 +5,7 @@ public class UserInfo  {
 	private int id;
 	private String name;
     private String tel;
-    private String headurl;
+    private String headUrl;
     private Integer gender;
     public UserInfo() {
 		// TODO Auto-generated constructor stub
@@ -15,7 +15,7 @@ public class UserInfo  {
 		this.id = id;
 		this.name = name;
 		this.tel = tel;
-		this.headurl = headurl;
+		this.headUrl = headurl;
 		this.gender = gender;
 	}
 	public int getId() {
@@ -37,16 +37,22 @@ public class UserInfo  {
 		this.tel = tel;
 	}
 	public String getHeadurl() {
-		return headurl;
+		return headUrl;
 	}
 	public void setHeadurl(String headurl) {
-		this.headurl = headurl;
+		this.headUrl = headurl;
 	}
 	public Integer getGender() {
 		return gender;
 	}
 	public void setGender(Integer gender) {
 		this.gender = gender;
+	}
+	public String getHeadUrl() {
+		return headUrl;
+	}
+	public void setHeadUrl(String headUrl) {
+		this.headUrl = headUrl;
 	}
 
 

@@ -13,4 +13,5 @@ public List<Dynamic>  queryDynamicCollect(int userId);
 public List<DynamicInfo> CommendDynamics(int page, int row);//  推荐
 public List<Dynamic> RelevantRecom(String kind); // 相关
 public List<DynamicInfo> queryAttentDynamic(int userId);
+public List<DynamicInfo> queryMyDynamic(int userId);
 }

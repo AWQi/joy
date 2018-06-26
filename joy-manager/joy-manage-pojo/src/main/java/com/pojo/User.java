@@ -60,4 +60,5 @@ public class User {
     public void setGender(Integer gender) {
         this.gender = gender;
     }
+    
 }

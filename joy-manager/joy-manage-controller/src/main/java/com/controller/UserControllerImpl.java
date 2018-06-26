@@ -118,7 +118,7 @@ public JoyResult myFans(@RequestParam("userId")int userId) {
 @Override
 public JoyResult myAttention(@RequestParam("userId")int userId) {
 	List<UserInfo> userInfoList = userInfoServic.myAttention(userId);
-	return new JoyResult(userInfoServic);
+	return new JoyResult(userInfoList);
 }
 @RequestMapping("addAttention")
 @ResponseBody
