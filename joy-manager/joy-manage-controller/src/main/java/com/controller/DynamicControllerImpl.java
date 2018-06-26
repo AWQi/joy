@@ -8,6 +8,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 
+import com.bean.DynamicInfo;
 import com.common.JoyResult;
 import com.pojo.Dynamic;
 import com.service.DynamicService;
@@ -78,7 +79,7 @@ public JoyResult relevantRecom(@RequestParam("kind")String kind) {
 @ResponseBody
 @Override
 public JoyResult queryAttentDynamic(@RequestParam("userId")int userId) {
-List<Dynamic> dynamicList = dynamicService.queryAttentDynamic(userId);
+List<DynamicInfo> dynamicList = dynamicService.queryAttentDynamic(userId);
 	
 	return new JoyResult(dynamicList);
 }

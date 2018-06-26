@@ -79,7 +79,7 @@ public class UserInfoServiceImpl implements UserInfoService {
 			userCriteria.andIdEqualTo(a.getUser1Id());
 			List<User> userList = userMapper.selectByExample(userExample);
 			User user = userList.get(0);
-			UserInfo userInfo = new UserInfo(user.getId(), user.getName(), user.getTel(), user.getHeadurl(),
+			UserInfo userInfo = new UserInfo(user.getId(), user.getName(), user.getTel(), user.getHeadUrl(),
 					user.getGender());
 			fansList.add(userInfo);
 		}
@@ -104,7 +104,7 @@ public class UserInfoServiceImpl implements UserInfoService {
 			userCriteria.andIdEqualTo(a.getUser2Id());
 			List<User> userList = userMapper.selectByExample(userExample);
 			User user = userList.get(0);
-			UserInfo userInfo = new UserInfo(user.getId(), user.getName(), user.getTel(), user.getHeadurl(),
+			UserInfo userInfo = new UserInfo(user.getId(), user.getName(), user.getTel(), user.getHeadUrl(),
 					user.getGender());
 			myAttentList.add(userInfo);
 		}
@@ -147,7 +147,7 @@ public class UserInfoServiceImpl implements UserInfoService {
 		System.out.println(userList.size());
 		if (userList.size() > 0) {
 			User user = userList.get(0);
-			UserInfo userInfo = new UserInfo(user.getId(), user.getName(), user.getTel(), user.getHeadurl(),
+			UserInfo userInfo = new UserInfo(user.getId(), user.getName(), user.getTel(), user.getHeadUrl(),
 					user.getGender());
 			return userInfo;
 		} else {

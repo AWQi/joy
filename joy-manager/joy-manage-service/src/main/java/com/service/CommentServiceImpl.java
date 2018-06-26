@@ -47,7 +47,7 @@ private UserMapper userMapper;
 			List<User> userList = userMapper.selectByExample(example);
 			User user = userList.get(0);
 			CommentInfo commentInfo = new CommentInfo(
-					comment.getId(),dynamicId,user.getId(), user.getHeadurl(),
+					comment.getId(),dynamicId,user.getId(), user.getHeadUrl(),
 					user.getName(), comment.getContent(), comment.getDate());
 			commentInfoList.add(commentInfo);
 		 }

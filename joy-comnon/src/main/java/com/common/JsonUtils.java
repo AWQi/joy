@@ -68,5 +68,20 @@ public class JsonUtils {
     	
     	return null;
     }
+    /**
+     *   list转 json
+     *  
+     */
+    public static String listToJson(List<Object> list) {
+        ObjectMapper mapper = new ObjectMapper();
+        String json = "";
+		try {
+			json = mapper.writeValueAsString(list);
+		} catch (JsonProcessingException e) {
+			e.printStackTrace();
+		} 
+		return json;
+		
+	}
     
 }

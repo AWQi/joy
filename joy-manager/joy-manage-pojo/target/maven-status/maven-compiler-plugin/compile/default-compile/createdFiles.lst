@@ -14,8 +14,6 @@ com\pojo\User.class
 com\pojo\DynamicExample$GeneratedCriteria.class
 com\pojo\CommentExample$Criterion.class
 com\pojo\MuscovyplayExample$GeneratedCriteria.class
-com\bean\DynamicDetails.class
-com\pojo\UserKey.class
 com\pojo\DynamicExample.class
 com\pojo\UserExample$GeneratedCriteria.class
 com\pojo\AttentionExample$Criteria.class
@@ -41,4 +39,5 @@ com\pojo\StudioExample.class
 com\pojo\UserExample$Criterion.class
 com\pojo\StudioExample$GeneratedCriteria.class
 com\pojo\StudioExample$Criterion.class
+com\bean\DynamicInfo.class
 com\pojo\Comment.class

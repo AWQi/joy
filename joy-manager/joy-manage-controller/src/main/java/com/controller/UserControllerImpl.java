@@ -48,7 +48,7 @@ private UserInfoService userInfoServic;
 	if (user==null) {
 		return new JoyResult(300,"账号或密码错误",new UserInfo());
 	}else {
-		UserInfo userInfo = new UserInfo(user.getId(), user.getName(), user.getTel(), user.getHeadurl(), user.getGender());
+		UserInfo userInfo = new UserInfo(user.getId(), user.getName(), user.getTel(), user.getHeadUrl(), user.getGender());
 	    return new JoyResult(userInfo);
 	}	
 	}

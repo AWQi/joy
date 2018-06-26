@@ -7,7 +7,17 @@ public class Collection {
 
     private Integer userId;
 
-    public Integer getId() {
+    public Collection(Integer dynamicId, Integer userId) {
+		super();
+		this.dynamicId = dynamicId;
+		this.userId = userId;
+	}
+
+	public Collection() {
+		super();
+	}
+
+	public Integer getId() {
         return id;
     }
 

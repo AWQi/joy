@@ -1,5 +1,5 @@
 package com.bean;
-import com.pojo.UserKey;
+
 
 public class UserInfo  {
 	private int id;
