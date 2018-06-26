@@ -112,4 +112,5 @@ public class Dynamic {
     public void setCollectNum(Integer collectNum) {
         this.collectNum = collectNum;
     }
+    
 }

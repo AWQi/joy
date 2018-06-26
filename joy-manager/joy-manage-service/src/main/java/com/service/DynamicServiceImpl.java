@@ -79,15 +79,30 @@ public class DynamicServiceImpl implements DynamicService {
 	}
 
 	@Override
-	public List<Dynamic> CommendDynamics(int page, int row) {
+	public List<DynamicInfo> CommendDynamics(int page, int row) {
 
 		DynamicExample dynamicExample = new DynamicExample();
 		com.pojo.DynamicExample.Criteria criteria = dynamicExample.createCriteria();
 		PageHelper.startPage(page, row);
 		criteria.getAllCriteria();
-		dynamicExample.setOrderByClause("viewNum");
+		dynamicExample.setOrderByClause("view_Num  DESC");  //  DESC 降序   ASC  升序
+		
 		List<Dynamic> dynamicList = dynamicMapper.selectByExample(dynamicExample);
-		return dynamicList;
+
+		List<DynamicInfo> dyInfoList = new ArrayList(); 
+		for(Dynamic dy :dynamicList) {
+//			UserExample userExample = new UserExample();
+//			com.pojo.UserExample.Criteria userCriteria = userExample.createCriteria();
+			User  author = userMapper.selectByPrimaryKey(dy.getAuthorId());
+			DynamicInfo dynamicInfo = new DynamicInfo(dy.getId(), dy.getTitle()
+					, dy.getIntroduction(), dy.getImageUrl(), dy.getKind()
+					, dy.getVideoUrl(), dy.getPraisesNum(), dy.getViewNum()
+					, dy.getCollectNum(), dy.getDate(), dy.getAuthorId()
+					, author.getName(), author.getHeadUrl());
+			dyInfoList.add(dynamicInfo);
+			}
+		
+		return dyInfoList;
 	}
 
 	@Override

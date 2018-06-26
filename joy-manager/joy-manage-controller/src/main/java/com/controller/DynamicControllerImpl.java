@@ -69,7 +69,7 @@ public JoyResult relevantRecom(@RequestParam("kind")String kind) {
 @ResponseBody
 	@Override
 	public JoyResult commendDynamics(@RequestParam("page")int page) {
-		List<Dynamic> dynamicList = dynamicService.CommendDynamics(page, 4);
+		List<DynamicInfo> dynamicList = dynamicService.CommendDynamics(page, 8);
 		return new JoyResult(dynamicList);
 	}
 /**

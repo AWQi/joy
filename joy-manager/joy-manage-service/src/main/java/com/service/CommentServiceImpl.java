@@ -37,11 +37,13 @@ private UserMapper userMapper;
 		 commentCriteria.andDynamicIdEqualTo(dynamicId);
 		 List<Comment> commentList =  commentMapper.selectByExample(commentExample);
 		 List<CommentInfo> commentInfoList = new ArrayList();
+		 System.out.println("dynamicId "+dynamicId);
+		 System.out.println("commentList.size()   "+commentList.size());
 		 /**
 		  *  查询评论作者
 		  */	
 		 for(Comment comment: commentList) {
-			 UserExample example = new UserExample();
+			UserExample example = new UserExample();
 			Criteria criteria = example.createCriteria();
 			criteria.andIdEqualTo( comment.getUserId());
 			List<User> userList = userMapper.selectByExample(example);
@@ -51,6 +53,9 @@ private UserMapper userMapper;
 					user.getName(), comment.getContent(), comment.getDate());
 			commentInfoList.add(commentInfo);
 		 }
+		 
+		 
+		 System.out.println("commentInfoList.size()    " +commentInfoList.size());
 		return commentInfoList;
 	}
 	/**

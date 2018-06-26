@@ -20,9 +20,9 @@ public class DynamicInfo {
     private int authorId;
     private String authorName;
     private String authorHeadUrl;
+       
     
-    
-    
+
 	public DynamicInfo(int id, String title, String introduction, String imageUrl, String kind, String videoUrl,
 			Integer praisesNum, Integer viewNum, Integer collectNum, Date date, int authorId, String authorName,
 			String authorHeadUrl) {

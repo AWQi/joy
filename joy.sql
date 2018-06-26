@@ -25,15 +25,23 @@ CREATE TABLE `attention` (
   `user_1_id` int(11) NOT NULL COMMENT '关注者',
   `user_2_id` int(11) NOT NULL COMMENT '被关注者',
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=15 DEFAULT CHARSET=utf8;
 
 /*Data for the table `attention` */
 
 insert  into `attention`(`id`,`user_1_id`,`user_2_id`) values 
-(1,1,3),
 (2,1,4),
 (3,2,1),
-(4,4,1);
+(4,4,1),
+(6,1,5),
+(7,1,3),
+(8,1,6),
+(9,2,3),
+(10,2,5),
+(11,2,4),
+(12,3,1),
+(13,3,2),
+(14,3,4);
 
 /*Table structure for table `barrage` */
 
@@ -52,14 +60,14 @@ DROP TABLE IF EXISTS `collection`;
 
 CREATE TABLE `collection` (
   `id` int(11) NOT NULL AUTO_INCREMENT COMMENT '收藏  id',
-  `dyId` int(11) NOT NULL COMMENT '动态  id',
-  `userId` int(11) NOT NULL COMMENT '用户id',
+  `dynamic_Id` int(11) NOT NULL COMMENT '动态  id',
+  `user_Id` int(11) NOT NULL COMMENT '用户id',
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=9 DEFAULT CHARSET=utf8;
 
 /*Data for the table `collection` */
 
-insert  into `collection`(`id`,`dyId`,`userId`) values 
+insert  into `collection`(`id`,`dynamic_Id`,`user_Id`) values 
 (1,1,1),
 (2,3,2),
 (3,4,2),
@@ -83,7 +91,6 @@ CREATE TABLE `comment` (
 /*Data for the table `comment` */
 
 insert  into `comment`(`id`,`user_id`,`dynamic_id`,`content`,`date`) values 
-(1,1,3,'good','2018-06-23 07:19:25'),
 (2,1,2,'great','2018-06-23 07:19:25'),
 (3,1,1,'fine','2018-06-23 07:19:25'),
 (4,1,4,'nice','2018-06-23 07:19:25'),
@@ -95,29 +102,29 @@ DROP TABLE IF EXISTS `dynamic`;
 
 CREATE TABLE `dynamic` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
-  `authorId` int(11) NOT NULL COMMENT '作者 id',
+  `author_Id` int(11) NOT NULL COMMENT '作者 id',
   `title` varchar(20) NOT NULL DEFAULT 'up主 很懒什么也没有写' COMMENT '标题',
-  `imageUrl` char(200) NOT NULL COMMENT '封面路径',
+  `image_Url` char(200) NOT NULL COMMENT '封面路径',
   `introduction` varchar(50) NOT NULL DEFAULT 'up主 很懒什么也没有写' COMMENT '简介',
-  `videoUrl` char(100) NOT NULL COMMENT '内容的路径',
-  `praisesNum` int(11) NOT NULL DEFAULT '0' COMMENT '点赞数',
+  `video_Url` char(100) NOT NULL COMMENT '内容的路径',
+  `praises_Num` int(11) NOT NULL DEFAULT '0' COMMENT '点赞数',
   `kind` varchar(20) NOT NULL DEFAULT '未分类' COMMENT '分类',
   `date` timestamp NULL DEFAULT CURRENT_TIMESTAMP COMMENT '默认填入系统时间',
-  `viewNum` int(11) DEFAULT '0' COMMENT '浏览量',
-  `collNum` int(11) DEFAULT '0' COMMENT '收藏量',
+  `view_Num` int(11) DEFAULT '0' COMMENT '浏览量',
+  `collect_Num` int(11) DEFAULT '0' COMMENT '收藏量',
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=utf8;
 
 /*Data for the table `dynamic` */
 
-insert  into `dynamic`(`id`,`authorId`,`title`,`imageUrl`,`introduction`,`videoUrl`,`praisesNum`,`kind`,`date`,`viewNum`,`collNum`) values 
-(1,1,'AAA','https://img02.sogoucdn.com/app/a/100520093/12400ee0679b6e1e-d3e639ff657519ea-a9d4d43a8f00e80cfae6b8f74af91564.jpg','AAAAAAAAAAA','https://www.bilibili.com/video/av25373581/?spm_id_from=333.334.bili_douga.12',80,'游戏','2018-06-22 16:05:05',50,1),
-(2,5,'BBB','https://img02.sogoucdn.com/app/a/100520093/12400ee0679b6e1e-d3e639ff657519ea-a9d4d43a8f00e80cfae6b8f74af91564.jpg','up主 很懒什么也没有写','https://www.bilibili.com/video/av25373581/?spm_id_from=333.334.bili_douga.12',30,'动漫','2018-06-22 19:30:30',30,10),
-(3,2,'CCC','https://img02.sogoucdn.com/app/a/100520093/12400ee0679b6e1e-d3e639ff657519ea-a9d4d43a8f00e80cfae6b8f74af91564.jpg','up主 很懒什么也没有写','https://www.bilibili.com/video/av25373581/?spm_id_from=333.334.bili_douga.12',60,'音乐','2018-06-22 19:31:58',40,50),
-(4,4,'DDD','https://img02.sogoucdn.com/app/a/100520093/12400ee0679b6e1e-d3e639ff657519ea-a9d4d43a8f00e80cfae6b8f74af91564.jpg','up主 很懒什么也没有写','https://www.bilibili.com/video/av25373581/?spm_id_from=333.334.bili_douga.12',0,'生活','2018-06-22 19:35:23',25,0),
-(5,1,'EEE','https://img02.sogoucdn.com/app/a/100520093/12400ee0679b6e1e-d3e639ff657519ea-a9d4d43a8f00e80cfae6b8f74af91564.jpg','up主 很懒什么也没有写','https://www.bilibili.com/video/av25373581/?spm_id_from=333.334.bili_douga.12',0,'时尚','2018-06-22 19:37:58',38,0),
-(6,3,'up主 很懒什么也没有写','https://img02.sogoucdn.com/app/a/100520093/12400ee0679b6e1e-d3e639ff657519ea-a9d4d43a8f00e80cfae6b8f74af91564.jpg','up主 很懒什么也没有写','https://www.bilibili.com/video/av25373581/?spm_id_from=333.334.bili_douga.12',0,'未分类','2018-06-22 19:38:55',41,0),
-(7,5,'GGG','https://img02.sogoucdn.com/app/a/100520093/12400ee0679b6e1e-d3e639ff657519ea-a9d4d43a8f00e80cfae6b8f74af91564.jpg','Ada','https://www.bilibili.com/video/av25373581/?spm_id_from=333.334.bili_douga.12',0,'未分类','2018-06-22 19:39:46',20,0);
+insert  into `dynamic`(`id`,`author_Id`,`title`,`image_Url`,`introduction`,`video_Url`,`praises_Num`,`kind`,`date`,`view_Num`,`collect_Num`) values 
+(1,1,'AAA','https://img02.sogoucdn.com/app/a/100520093/12400ee0679b6e1e-d3e639ff657519ea-a9d4d43a8f00e80cfae6b8f74af91564.jpg','AAAAAAAAAAA','http://140.143.16.51/video/v/ant.mp4',80,'游戏','2018-06-22 16:05:05',50,1),
+(2,5,'BBB','https://img02.sogoucdn.com/app/a/100520093/12400ee0679b6e1e-d3e639ff657519ea-a9d4d43a8f00e80cfae6b8f74af91564.jpg','up主 很懒什么也没有写','http://140.143.16.51/video/v/ant.mp4',30,'动漫','2018-06-22 19:30:30',30,10),
+(3,2,'CCC','https://img02.sogoucdn.com/app/a/100520093/12400ee0679b6e1e-d3e639ff657519ea-a9d4d43a8f00e80cfae6b8f74af91564.jpg','up主 很懒什么也没有写','http://140.143.16.51/video/v/ant.mp4',60,'音乐','2018-06-22 19:31:58',40,50),
+(4,4,'DDD','https://img02.sogoucdn.com/app/a/100520093/12400ee0679b6e1e-d3e639ff657519ea-a9d4d43a8f00e80cfae6b8f74af91564.jpg','up主 很懒什么也没有写','http://140.143.16.51/video/v/ant.mp4',0,'生活','2018-06-22 19:35:23',25,0),
+(5,1,'EEE','https://img02.sogoucdn.com/app/a/100520093/12400ee0679b6e1e-d3e639ff657519ea-a9d4d43a8f00e80cfae6b8f74af91564.jpg','up主 很懒什么也没有写','http://140.143.16.51/video/v/ant.mp4',0,'时尚','2018-06-22 19:37:58',38,0),
+(6,3,'AS','https://img02.sogoucdn.com/app/a/100520093/12400ee0679b6e1e-d3e639ff657519ea-a9d4d43a8f00e80cfae6b8f74af91564.jpg','up主 很懒什么也没有写','http://140.143.16.51/video/v/ant.mp4',0,'未知','2018-06-22 19:38:55',41,0),
+(7,5,'GGG','https://img02.sogoucdn.com/app/a/100520093/12400ee0679b6e1e-d3e639ff657519ea-a9d4d43a8f00e80cfae6b8f74af91564.jpg','Ada','http://140.143.16.51/video/v/ant.mp4',0,'未知','2018-06-22 19:39:46',20,0);
 
 /*Table structure for table `muscovyplay` */
 
@@ -126,14 +133,14 @@ DROP TABLE IF EXISTS `muscovyplay`;
 CREATE TABLE `muscovyplay` (
   `id` int(11) NOT NULL AUTO_INCREMENT COMMENT '番剧',
   `name` varchar(20) NOT NULL,
-  `imageUrl` varchar(50) NOT NULL,
-  `video` varchar(50) NOT NULL,
+  `image_Url` varchar(50) NOT NULL,
+  `video_Url` varchar(50) NOT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8;
 
 /*Data for the table `muscovyplay` */
 
-insert  into `muscovyplay`(`id`,`name`,`imageUrl`,`video`) values 
+insert  into `muscovyplay`(`id`,`name`,`image_Url`,`video_Url`) values 
 (1,'一人之下','A','A'),
 (2,'王牌御史','A','A'),
 (3,'妖怪名单','A','B');
@@ -144,10 +151,10 @@ DROP TABLE IF EXISTS `studio`;
 
 CREATE TABLE `studio` (
   `id` int(11) NOT NULL COMMENT '直播间id  与用户id相同',
-  `imageUrl` varchar(100) NOT NULL COMMENT '封面  url',
+  `image_Url` varchar(100) NOT NULL COMMENT '封面  url',
   `title` varchar(50) NOT NULL COMMENT '直播间标题',
   `premiere` int(11) NOT NULL COMMENT '是否开播',
-  `studioUrl` varchar(100) NOT NULL COMMENT '直播间 url',
+  `studio_Url` varchar(100) NOT NULL COMMENT '直播间 url',
   PRIMARY KEY (`id`),
   CONSTRAINT `su` FOREIGN KEY (`id`) REFERENCES `user` (`id`) ON UPDATE CASCADE
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
@@ -163,14 +170,14 @@ CREATE TABLE `user` (
   `name` varchar(20) NOT NULL DEFAULT 'user' COMMENT '昵称',
   `password` varchar(20) NOT NULL,
   `tel` varchar(13) NOT NULL,
-  `headUrl` varchar(200) NOT NULL DEFAULT 'http://imgsrc.baidu.com/imgad/pic/item/7c1ed21b0ef41bd52a1399d25bda81cb39db3d57.jpg' COMMENT '头像Url',
+  `head_Url` varchar(200) NOT NULL DEFAULT 'http://imgsrc.baidu.com/imgad/pic/item/7c1ed21b0ef41bd52a1399d25bda81cb39db3d57.jpg' COMMENT '头像Url',
   `gender` int(11) DEFAULT NULL COMMENT '性别',
-  PRIMARY KEY (`id`,`name`,`password`)
-) ENGINE=InnoDB AUTO_INCREMENT=10 DEFAULT CHARSET=utf8;
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=12 DEFAULT CHARSET=utf8;
 
 /*Data for the table `user` */
 
-insert  into `user`(`id`,`name`,`password`,`tel`,`headUrl`,`gender`) values 
+insert  into `user`(`id`,`name`,`password`,`tel`,`head_Url`,`gender`) values 
 (1,'千彧','000000','18734741443','http://140.143.16.51/image/head/a.jpg',1),
 (2,'残阳','000000','16532417413','http://140.143.16.51/image/head/g.jpg',2),
 (3,'红尘','000000','18741652310','http://140.143.16.51/image/head/j.jpg',0),
