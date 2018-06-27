@@ -52,4 +52,16 @@ public class Comment {
     public void setDate(Date date) {
         this.date = date;
     }
+
+	public Comment(Integer userId, Integer dynamicId, String content) {
+		super();
+		this.userId = userId;
+		this.dynamicId = dynamicId;
+		this.content = content;
+	}
+
+	public Comment() {
+		super();
+	}
+    
 }

@@ -7,9 +7,12 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.mapper.AttentionMapper;
+import com.mapper.DynamicMapper;
 import com.mapper.UserMapper;
 import com.pojo.Attention;
 import com.pojo.AttentionExample;
+import com.pojo.Dynamic;
+import com.pojo.DynamicExample;
 import com.pojo.User;
 import com.bean.UserInfo;
 import com.pojo.UserExample;
@@ -21,12 +24,13 @@ public class UserInfoServiceImpl implements UserInfoService {
 	private UserMapper userMapper;
 	@Autowired
 	private AttentionMapper attentionMapper;
-
+	@Autowired
+	private DynamicMapper dynamicMapper;
 	/**
 	 * 查用户信息
 	 */
 	@Override
-	public User login(String tel, String pwd) {
+	public UserInfo login(String tel, String pwd) {
 		UserExample userExample = new UserExample();
 		Criteria criteria = userExample.createCriteria();
 		criteria.andTelEqualTo(tel);
@@ -34,7 +38,47 @@ public class UserInfoServiceImpl implements UserInfoService {
 		List<User> userList = userMapper.selectByExample(userExample);
 		System.out.println(userList.size());
 		if (userList.size() > 0) {
-			return userList.get(0);
+			
+			User user = userList.get(0);
+			/**  
+			 * 
+			 *   粉丝数
+			 */
+			AttentionExample ae1 = new AttentionExample();
+			com.pojo.AttentionExample.Criteria attentionCriteria = ae1.createCriteria();
+			attentionCriteria.andUser2IdEqualTo(user.getId());
+			List<Attention> a1 = attentionMapper.selectByExample(ae1);
+			
+			int i1 = a1.size();
+		
+			/**
+			 *   关注 数
+			 * 
+			 */
+			AttentionExample ae2 = new AttentionExample();
+			com.pojo.AttentionExample.Criteria ac1 = ae2.createCriteria();
+			ac1.andUser2IdEqualTo(user.getId());
+			List<Attention> a2 = attentionMapper.selectByExample(ae1);
+			
+			int i2 = a2.size();
+		
+			/**
+			 * 
+			 *  我的动态  数
+			 */
+			DynamicExample dynamicExample = new DynamicExample();
+			com.pojo.DynamicExample.Criteria dynamicCriteria = dynamicExample.createCriteria();
+			dynamicCriteria.andAuthorIdEqualTo(user.getId());
+			List<Dynamic> dynamicList = dynamicMapper.selectByExample(dynamicExample);
+			
+			int i3 = dynamicList.size();
+			
+			
+			UserInfo userInfo = new UserInfo(user.getId(), user.getName(),
+					tel,user.getHeadUrl(), user.getGender(), i2, 
+					i1, i3)	;		
+			return  userInfo;
+			
 		} else {
 			return null;
 		}

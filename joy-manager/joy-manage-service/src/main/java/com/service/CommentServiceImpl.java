@@ -58,8 +58,10 @@ private UserMapper userMapper;
 	 *   添加评论
 	 */
 	@Override
-	public void addComment(Comment comment) {
+	public int addComment(Comment comment) {
 		commentMapper.insert(comment);
+		int id = comment.getId();
+		return id;
 	}
 	/**
 	 *   删除评论

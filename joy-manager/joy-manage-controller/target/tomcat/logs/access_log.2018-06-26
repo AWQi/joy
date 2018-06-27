@@ -1,3 +1,0 @@
-127.0.0.1 - - [26/Jun/2018:17:01:02 +0800] "POST /queryAttentDynamic?userId=1 HTTP/1.1" 200 5007 http-bio-8080-exec-1 782
-127.0.0.1 - - [26/Jun/2018:17:01:02 +0800] "POST /commendDynamics?page=1 HTTP/1.1" 200 3354 http-bio-8080-exec-2 450
-127.0.0.1 - - [26/Jun/2018:17:01:08 +0800] "POST /myAttention?userId=1 HTTP/1.1" 500 11117 http-bio-8080-exec-5 147

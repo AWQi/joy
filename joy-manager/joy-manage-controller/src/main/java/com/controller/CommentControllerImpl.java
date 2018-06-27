@@ -32,15 +32,19 @@ public class CommentControllerImpl implements CommentController{
 	@RequestMapping("addComment")
 	@ResponseBody
 	@Override
-	public JoyResult addComment(@RequestBody String CommentInfo) {
-		Comment comment = JsonUtils.jsonToPojo(CommentInfo, Comment.class);
-		commentService.addComment(comment);
-		return JoyResult.build(200,"评论成功");
+	public JoyResult addComment(@RequestBody String commentStr) {
+//		CommentInfo commentInfo = JsonUtils.jsonToPojo(commentInfoStr, CommentInfo.class);
+//		Comment comment = new Comment(commentInfo.getUserId(), commentInfo.getDynamicId(), commentInfo.getContent());
+		Comment comment = JsonUtils.jsonToPojo(commentStr, Comment.class);
+		int i = commentService.addComment(comment);
+		System.out.println(i);
+		return JoyResult.build(200,"评论成功",i);
 	}
 	@RequestMapping("deleteComment")
 	@ResponseBody
 	@Override
 	public JoyResult deleteComment(@RequestParam("commentId")int commentId) {
+		System.out.println();
 		commentService.deleteComment(commentId);
 		return JoyResult.build(200, "删除评论成功");
 	}

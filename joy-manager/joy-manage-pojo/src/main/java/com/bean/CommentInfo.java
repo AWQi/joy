@@ -3,8 +3,8 @@ package com.bean;
 public class CommentInfo {
 	private  int id ;
 	private  int dynamicId;
-	private  int authorId;
-	private  String authorImageURL;
+	private  int userId;
+	private  String authorImageUrl;
 	private  String authorName;
 	private  String content;
 	private  java.util.Date date;
@@ -14,8 +14,8 @@ public CommentInfo(int id, int dynamicId, int authorId, String authorImageURL, S
 		super();
 		this.id = id;
 		this.dynamicId = dynamicId;
-		this.authorId = authorId;
-		this.authorImageURL = authorImageURL;
+		this.userId = authorId;
+		this.authorImageUrl = authorImageURL;
 		this.authorName = authorName;
 		this.content = content;
 		this.date = date;
@@ -35,17 +35,17 @@ public int getId() {
 	public void setId(int id) {
 		this.id = id;
 	}
-	public int getAuthorId() {
-		return authorId;
+	public int getUserId() {
+		return userId;
 	}
-	public void setAuthorId(int authorId) {
-		this.authorId = authorId;
+	public void setUserId(int authorId) {
+		this.userId = authorId;
 	}
-	public String getAuthorImageURL() {
-		return authorImageURL;
+	public String getAuthorImageUrl() {
+		return authorImageUrl;
 	}
-	public void setAuthorImageURL(String authorImageURL) {
-		this.authorImageURL = authorImageURL;
+	public void setAuthorImageUrl(String authorImageURL) {
+		this.authorImageUrl = authorImageURL;
 	}
 	public String getAuthorName() {
 		return authorName;

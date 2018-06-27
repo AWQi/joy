@@ -43,12 +43,11 @@ private UserInfoService userInfoServic;
 	@Override
 	public JoyResult login(@RequestParam("tel")String tel,@RequestParam("password")String password) {
 	System.out.println("login服务 进入");
-	User user = userInfoServic.login(tel, password);
+	UserInfo userInfo = userInfoServic.login(tel, password);
 	System.out.println("查询结束");
-	if (user==null) {
+	if (userInfo==null) {
 		return new JoyResult(300,"账号或密码错误",new UserInfo());
 	}else {
-		UserInfo userInfo = new UserInfo(user.getId(), user.getName(), user.getTel(), user.getHeadUrl(), user.getGender());
 	    return new JoyResult(userInfo);
 	}	
 	}
@@ -147,5 +146,10 @@ public JoyResult queryDynamicAuthor(@RequestParam("userId")int userId) {
 	UserInfo userInfo = userInfoServic.queryUserInfo(userId);
 	return new JoyResult(userInfo);
 }
-
+@RequestMapping("queryUserInfo")
+@ResponseBody
+public JoyResult queryUserInfo(@RequestParam("userId")int userId) {
+	UserInfo userInfo = userInfoServic.queryUserInfo(userId);
+	return new JoyResult(userInfo);
+}
 }

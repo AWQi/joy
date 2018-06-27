@@ -104,6 +104,11 @@
       content, date)
     values (#{id,jdbcType=INTEGER}, #{userId,jdbcType=INTEGER}, #{dynamicId,jdbcType=INTEGER}, 
       #{content,jdbcType=VARCHAR}, #{date,jdbcType=TIMESTAMP})
+      
+    <selectKey keyProperty="id" order="AFTER" resultType="java.lang.Integer">
+        SELECT LAST_INSERT_ID()
+    </selectKey>
+        
   </insert>
   <insert id="insertSelective" parameterType="com.pojo.Comment" >
     insert into comment
@@ -208,4 +213,7 @@
       date = #{date,jdbcType=TIMESTAMP}
     where id = #{id,jdbcType=INTEGER}
   </update>
+<!--   <select id="selectLastInsertId">
+   select last_insert_id()
+  </select> -->
 </mapper>

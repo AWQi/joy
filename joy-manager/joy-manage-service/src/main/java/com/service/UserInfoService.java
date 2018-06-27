@@ -6,7 +6,7 @@ import com.pojo.User;
 import com.bean.UserInfo;
 import com.common.JoyResult;;
 public interface UserInfoService {
-public User login(String tel,String pwd) ;
+public UserInfo login(String tel,String pwd) ;
 public int preRegister(String tel);
 public void Register(User user);
 public UserInfo queryUserInfo(int userId);

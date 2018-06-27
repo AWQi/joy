@@ -7,6 +7,6 @@ import com.pojo.Comment;
 
 public interface CommentService {
 public List<CommentInfo> queryComment(int dynamicId);
-public void addComment(Comment comment);
+public int addComment(Comment comment);
 public void deleteComment(int commentId);
 }

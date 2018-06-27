@@ -21,5 +21,5 @@ public JoyResult addAttention(int user1Id,int user2Id);
 public JoyResult deleteAttention(int user1Id,int user2Id);
 public JoyResult preRegister(String tel,HttpServletResponse response);
 public JoyResult register(String userInfo,String verificationCode);
-
+public JoyResult queryUserInfo(int userId);
 }

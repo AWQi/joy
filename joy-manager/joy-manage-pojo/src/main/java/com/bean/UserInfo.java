@@ -7,6 +7,9 @@ public class UserInfo  {
     private String tel;
     private String headUrl;
     private Integer gender;
+    private Integer myAttentNum;
+    private Integer myFanNum;
+    private Integer myDynamicNum;
     public UserInfo() {
 		// TODO Auto-generated constructor stub
 	}
@@ -18,8 +21,41 @@ public class UserInfo  {
 		this.headUrl = headurl;
 		this.gender = gender;
 	}
+	
+	
+	public UserInfo(int id, String name, String tel, String headUrl, Integer gender, Integer myAttentNum,
+			Integer myFanNum, Integer myDynamicNum) {
+		super();
+		this.id = id;
+		this.name = name;
+		this.tel = tel;
+		this.headUrl = headUrl;
+		this.gender = gender;
+		this.myAttentNum = myAttentNum;
+		this.myFanNum = myFanNum;
+		this.myDynamicNum = myDynamicNum;
+	}
 	public int getId() {
 		return id;
+	}
+	
+	public Integer getMyAttentNum() {
+		return myAttentNum;
+	}
+	public void setMyAttentNum(Integer myAttentNum) {
+		this.myAttentNum = myAttentNum;
+	}
+	public Integer getMyFanNum() {
+		return myFanNum;
+	}
+	public void setMyFanNum(Integer myFanNum) {
+		this.myFanNum = myFanNum;
+	}
+	public Integer getMyDynamicNum() {
+		return myDynamicNum;
+	}
+	public void setMyDynamicNum(Integer myDynamicNum) {
+		this.myDynamicNum = myDynamicNum;
 	}
 	public void setId(int id) {
 		this.id = id;

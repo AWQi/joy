@@ -27,4 +27,7 @@ public interface CommentMapper {
     int updateByPrimaryKeySelective(Comment record);
 
     int updateByPrimaryKey(Comment record);
+    
+//    int selectLastInsertId();  
+    
 }
