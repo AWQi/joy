@@ -1,4 +1,4 @@
-#JOy  后端项目
+#Joy  后端项目
 =============
 本项目采用spring+springMVC+mybatis+maven+jackson等多种技术。
 --------------
