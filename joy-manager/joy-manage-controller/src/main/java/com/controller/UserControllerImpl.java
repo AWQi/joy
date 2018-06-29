@@ -59,6 +59,7 @@ private UserInfoService userInfoServic;
 @ResponseBody
 @Override
 public JoyResult preRegister(@RequestParam("tel") final String tel,HttpServletResponse response) {
+	System.out.println("preregister");
 	int n = userInfoServic.preRegister(tel);
 	if (n==0) {  // 手机号去重
 //		String s = HttpUtil.getSixRandom();// 生成六位 验证码
@@ -66,18 +67,20 @@ public JoyResult preRegister(@RequestParam("tel") final String tel,HttpServletRe
 		String s = "000000";
 		String res = "";
 		if (res!=null) {
-			code.put(tel,s); // 把验证码放入  map 注册时取出
-			//  开启定时任务  验证码失效
-		     timer.schedule(new TimerTask() {
-			       public void run() {
-			         System.out.println("tel "+tel +" 失效");
-			         this.cancel();
-			         code.remove("tel");
-			         if(code.size()==0) {
-						timer.cancel();
-					}
-			      }
-			     }, 1000*60);
+			
+//			code.put(tel,s); // 把验证码放入  map 注册时取出
+//			//  开启定时任务  验证码失效
+//		     timer.schedule(new TimerTask() {
+//			       public void run() {
+//			         System.out.println("tel "+tel +" 失效");
+//			         this.cancel();
+//			         code.remove("tel");
+//			         if(code.size()==0) {
+//						timer.cancel();
+//					}
+//			      }
+//			     }, 1000*60);
+			
 			return new JoyResult().build(200,"发送成功" );
 		}else {
 			response.setStatus(300);
@@ -92,12 +95,13 @@ public JoyResult preRegister(@RequestParam("tel") final String tel,HttpServletRe
 @ResponseBody
 @Override
 public JoyResult register(@RequestBody String userInfo,@RequestParam ("verificationCode")String verificationCode) {
-	
+	System.out.println("register");
 	User user = JsonUtils.jsonToPojo(userInfo, User.class);
-	String s = code.get(user.getTel());
-	if (verificationCode.equals(s)) { //   验证成功
-			userInfoServic.Register(user);
-			code.remove(s);
+//	String s = code.get(user.getTel());
+//	boolean  is = verificationCode.equals(s);
+	if (true) { //   验证成功
+			userInfoServic.register(user);
+//			code.remove(s);
 			return JoyResult.build(200,"注册成功！");
 	}else {
 			return JoyResult.build(300, "验证码错误");

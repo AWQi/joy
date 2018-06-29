@@ -1,5 +1,6 @@
 package com.service;
 
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -102,7 +103,10 @@ public class UserInfoServiceImpl implements UserInfoService {
 	 * 注册
 	 */
 	@Override
-	public void Register(User user) {
+	public void register(User user) {
+		if (user.getHeadUrl()==null) {
+			user.setHeadUrl("http://140.143.16.51/image/head/a.jpg");
+		}
 		userMapper.insert(user);
 	}
 

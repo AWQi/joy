@@ -4,4 +4,3 @@ com\controller\UserControllerImpl.class
 com\controller\DynamicControllerImpl.class
 com\controller\UserController.class
 com\controller\CommentControllerImpl.class
-com\controller\UserControllerImpl$1.class

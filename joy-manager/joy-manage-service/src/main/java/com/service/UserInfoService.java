@@ -8,7 +8,7 @@ import com.common.JoyResult;;
 public interface UserInfoService {
 public UserInfo login(String tel,String pwd) ;
 public int preRegister(String tel);
-public void Register(User user);
+public void register(User user);
 public UserInfo queryUserInfo(int userId);
 public List<UserInfo> myFans(int userId);
 public List<UserInfo> myAttention(int userId);

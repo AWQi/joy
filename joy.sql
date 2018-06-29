@@ -25,23 +25,27 @@ CREATE TABLE `attention` (
   `user_1_id` int(11) NOT NULL COMMENT '关注者',
   `user_2_id` int(11) NOT NULL COMMENT '被关注者',
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=15 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=33 DEFAULT CHARSET=utf8;
 
 /*Data for the table `attention` */
 
 insert  into `attention`(`id`,`user_1_id`,`user_2_id`) values 
-(2,1,4),
 (3,2,1),
 (4,4,1),
-(6,1,5),
-(7,1,3),
-(8,1,6),
 (9,2,3),
 (10,2,5),
 (11,2,4),
 (12,3,1),
 (13,3,2),
-(14,3,4);
+(14,3,4),
+(22,1,2),
+(25,1,4),
+(27,1,3),
+(28,1,5),
+(29,1,6),
+(30,2,3),
+(31,2,5),
+(32,2,6);
 
 /*Table structure for table `barrage` */
 
@@ -63,7 +67,7 @@ CREATE TABLE `collection` (
   `dynamic_Id` int(11) NOT NULL COMMENT '动态  id',
   `user_Id` int(11) NOT NULL COMMENT '用户id',
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=9 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=38 DEFAULT CHARSET=utf8;
 
 /*Data for the table `collection` */
 
@@ -73,7 +77,35 @@ insert  into `collection`(`id`,`dynamic_Id`,`user_Id`) values
 (3,4,2),
 (4,5,1),
 (5,2,4),
-(6,4,1);
+(6,4,1),
+(9,1,2),
+(10,1,4),
+(11,1,5),
+(12,1,6),
+(13,2,3),
+(14,2,4),
+(15,2,5),
+(16,2,6),
+(17,2,7),
+(18,3,1),
+(19,3,3),
+(20,3,4),
+(21,3,5),
+(22,3,6),
+(23,3,7),
+(24,4,2),
+(25,4,3),
+(26,4,4),
+(27,4,5),
+(28,4,6),
+(29,4,7),
+(30,4,8),
+(31,3,2),
+(32,3,5),
+(33,3,7),
+(35,1,6),
+(36,1,7),
+(37,1,8);
 
 /*Table structure for table `comment` */
 
@@ -86,15 +118,22 @@ CREATE TABLE `comment` (
   `content` varchar(100) NOT NULL COMMENT '内容',
   `date` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT '时间',
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=23 DEFAULT CHARSET=utf8;
 
 /*Data for the table `comment` */
 
 insert  into `comment`(`id`,`user_id`,`dynamic_id`,`content`,`date`) values 
 (2,1,2,'great','2018-06-23 07:19:25'),
-(3,1,1,'fine','2018-06-23 07:19:25'),
 (4,1,4,'nice','2018-06-23 07:19:25'),
-(5,2,1,'well','2018-06-23 08:13:00');
+(5,2,1,'well','2018-06-23 08:13:00'),
+(7,1,5,'nice','2018-06-23 07:19:25'),
+(8,1,6,'nice','2018-06-23 07:19:25'),
+(9,2,3,'great','2018-06-23 07:19:25'),
+(10,4,5,'great','2018-06-23 07:19:25'),
+(11,3,1,'great','2018-06-23 07:19:25'),
+(12,3,2,'great','2018-06-23 07:19:25'),
+(13,3,4,'great','2018-06-23 07:19:25'),
+(22,1,1,'saca','2018-06-27 10:48:38');
 
 /*Table structure for table `dynamic` */
 
@@ -113,18 +152,32 @@ CREATE TABLE `dynamic` (
   `view_Num` int(11) DEFAULT '0' COMMENT '浏览量',
   `collect_Num` int(11) DEFAULT '0' COMMENT '收藏量',
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=22 DEFAULT CHARSET=utf8;
 
 /*Data for the table `dynamic` */
 
 insert  into `dynamic`(`id`,`author_Id`,`title`,`image_Url`,`introduction`,`video_Url`,`praises_Num`,`kind`,`date`,`view_Num`,`collect_Num`) values 
-(1,1,'AAA','https://img02.sogoucdn.com/app/a/100520093/12400ee0679b6e1e-d3e639ff657519ea-a9d4d43a8f00e80cfae6b8f74af91564.jpg','AAAAAAAAAAA','http://140.143.16.51/video/v/ant.mp4',80,'游戏','2018-06-22 16:05:05',50,1),
-(2,5,'BBB','https://img02.sogoucdn.com/app/a/100520093/12400ee0679b6e1e-d3e639ff657519ea-a9d4d43a8f00e80cfae6b8f74af91564.jpg','up主 很懒什么也没有写','http://140.143.16.51/video/v/ant.mp4',30,'动漫','2018-06-22 19:30:30',30,10),
-(3,2,'CCC','https://img02.sogoucdn.com/app/a/100520093/12400ee0679b6e1e-d3e639ff657519ea-a9d4d43a8f00e80cfae6b8f74af91564.jpg','up主 很懒什么也没有写','http://140.143.16.51/video/v/ant.mp4',60,'音乐','2018-06-22 19:31:58',40,50),
-(4,4,'DDD','https://img02.sogoucdn.com/app/a/100520093/12400ee0679b6e1e-d3e639ff657519ea-a9d4d43a8f00e80cfae6b8f74af91564.jpg','up主 很懒什么也没有写','http://140.143.16.51/video/v/ant.mp4',0,'生活','2018-06-22 19:35:23',25,0),
-(5,1,'EEE','https://img02.sogoucdn.com/app/a/100520093/12400ee0679b6e1e-d3e639ff657519ea-a9d4d43a8f00e80cfae6b8f74af91564.jpg','up主 很懒什么也没有写','http://140.143.16.51/video/v/ant.mp4',0,'时尚','2018-06-22 19:37:58',38,0),
-(6,3,'AS','https://img02.sogoucdn.com/app/a/100520093/12400ee0679b6e1e-d3e639ff657519ea-a9d4d43a8f00e80cfae6b8f74af91564.jpg','up主 很懒什么也没有写','http://140.143.16.51/video/v/ant.mp4',0,'未知','2018-06-22 19:38:55',41,0),
-(7,5,'GGG','https://img02.sogoucdn.com/app/a/100520093/12400ee0679b6e1e-d3e639ff657519ea-a9d4d43a8f00e80cfae6b8f74af91564.jpg','Ada','http://140.143.16.51/video/v/ant.mp4',0,'未知','2018-06-22 19:39:46',20,0);
+(1,1,'Ask','http://140.143.16.51/image/cover/a.jpg','AAAAAAAAAAA','http://140.143.16.51/video/v/ant.mp4',80,'游戏','2018-06-22 16:05:05',50,1),
+(2,5,'BBdcscs','http://140.143.16.51/image/cover/z.jpg','up主 很懒什么也没有写','http://140.143.16.51/video/v/ant.mp4',30,'动漫','2018-06-22 19:30:30',30,10),
+(3,2,'Cds','http://140.143.16.51/image/cover/c.jpg','up主 很懒什么也没有写','http://140.143.16.51/video/v/ant.mp4',60,'音乐','2018-06-22 19:31:58',40,50),
+(4,4,'Dds','http://140.143.16.51/image/cover/d.jpg','up主 很懒什么也没有写','http://140.143.16.51/video/v/ant.mp4',0,'生活','2018-06-22 19:35:23',25,0),
+(5,1,'EEE','http://140.143.16.51/image/cover/e.jpg','up主 很懒什么也没有写','http://140.143.16.51/video/v/ant.mp4',0,'时尚','2018-06-22 19:37:58',38,0),
+(6,3,'AS','http://140.143.16.51/image/cover/f.jpg','up主 很懒什么也没有写','http://140.143.16.51/video/v/ant.mp4',0,'未知','2018-06-22 19:38:55',20,0),
+(7,5,'Gdasd','http://140.143.16.51/image/cover/g.jpg','Ada','http://140.143.16.51/video/v/ant.mp4',0,'未知','2018-06-22 19:39:46',24,0),
+(8,1,'Awe','http://140.143.16.51/image/cover/h.jpg','AAAAAAAAAAA','http://140.143.16.51/video/v/ant.mp4',80,'游戏','2018-06-22 16:05:05',50,1),
+(9,4,'DDa','http://140.143.16.51/image/cover/i.jpg','up主 很懒什么也没有写','http://140.143.16.51/video/v/ant.mp4',0,'生活','2018-06-22 19:35:23',25,0),
+(10,1,'EEE','http://140.143.16.51/image/cover/j.jpg','up主 很懒什么也没有写','http://140.143.16.51/video/v/ant.mp4',0,'时尚','2018-06-22 19:37:58',38,0),
+(11,3,'AS','http://140.143.16.51/image/cover/k.jpg','up主 很懒什么也没有写','http://140.143.16.51/video/v/ant.mp4',0,'未知','2018-06-22 19:38:55',30,0),
+(12,5,'Gdsd','http://140.143.16.51/image/cover/l.jpg','Ada','http://140.143.16.51/video/v/ant.mp4',0,'未知','2018-06-22 19:39:46',20,0),
+(13,5,'BBB','http://140.143.16.51/image/cover/m.jpg','up主 很懒什么也没有写','http://140.143.16.51/video/v/ant.mp4',30,'动漫','2018-06-22 19:30:30',30,10),
+(14,2,'Cds','http://140.143.16.51/image/cover/n.jpg','up主 很懒什么也没有写','http://140.143.16.51/video/v/ant.mp4',60,'音乐','2018-06-22 19:31:58',40,50),
+(15,1,'Aqa','http://140.143.16.51/image/cover/o.jpg','AAAAAAAAAAA','http://140.143.16.51/video/v/ant.mp4',80,'游戏','2018-06-22 16:05:05',50,1),
+(16,5,'BBxx','http://140.143.16.51/image/cover/p.jpg','up主 很懒什么也没有写','http://140.143.16.51/video/v/ant.mp4',30,'动漫','2018-06-22 19:30:30',30,10),
+(17,2,'Cxz','http://140.143.16.51/image/cover/q.jpg','up主 很懒什么也没有写','http://140.143.16.51/video/v/ant.mp4',60,'音乐','2018-06-22 19:31:58',40,50),
+(18,4,'Dsa','https://img02.sogoucdn.com/app/a/100520093/12400ee0679b6e1e-d3e639ff657519ea-a9d4d43a8f00e80cfae6b8f74af91564.jpg','up主 很懒什么也没有写','http://140.143.16.51/video/v/ant.mp4',0,'生活','2018-06-22 19:35:23',25,0),
+(19,1,'EEE','https://img02.sogoucdn.com/app/a/100520093/12400ee0679b6e1e-d3e639ff657519ea-a9d4d43a8f00e80cfae6b8f74af91564.jpg','up主 很懒什么也没有写','http://140.143.16.51/video/v/ant.mp4',0,'时尚','2018-06-22 19:37:58',38,0),
+(20,3,'AS','https://img02.sogoucdn.com/app/a/100520093/12400ee0679b6e1e-d3e639ff657519ea-a9d4d43a8f00e80cfae6b8f74af91564.jpg','up主 很懒什么也没有写','http://140.143.16.51/video/v/ant.mp4',0,'未知','2018-06-22 19:38:55',21,0),
+(21,5,'Gds','https://img02.sogoucdn.com/app/a/100520093/12400ee0679b6e1e-d3e639ff657519ea-a9d4d43a8f00e80cfae6b8f74af91564.jpg','Ada','http://140.143.16.51/video/v/ant.mp4',0,'未知','2018-06-22 19:39:46',20,0);
 
 /*Table structure for table `muscovyplay` */
 
